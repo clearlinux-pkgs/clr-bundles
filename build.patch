@@ -1,0 +1,14 @@
+diff -purN clr-bundles-26890.org/Makefile clr-bundles-26890/Makefile
+--- clr-bundles-26890.org/Makefile	1970-01-01 00:00:00.000000000 +0000
++++ clr-bundles-26890/Makefile	2018-12-28 18:22:14.129710792 +0000
+@@ -0,0 +1,10 @@
++all: bundles
++
++bundles:
++	echo "Nothing to build"
++	
++
++install:
++	mkdir -p $(DESTDIR)/usr/share/clr-bundles
++	cp packages $(DESTDIR)/usr/share/clr-bundles/
++	cp -a bundles/* $(DESTDIR)/usr/share/clr-bundles/
