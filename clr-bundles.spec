@@ -4,7 +4,7 @@
 #
 Name     : clr-bundles
 Version  : 27040
-Release  : 4
+Release  : 5
 URL      : https://github.com/clearlinux/clr-bundles/archive/27040.tar.gz
 Source0  : https://github.com/clearlinux/clr-bundles/archive/27040.tar.gz
 Summary  : No detailed summary available
@@ -33,12 +33,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546564202
+export SOURCE_DATE_EPOCH=1546568524
 make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1546564202
+export SOURCE_DATE_EPOCH=1546568524
 rm -rf %{buildroot}
 %make_install
 
