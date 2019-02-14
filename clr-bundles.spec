@@ -4,7 +4,7 @@
 #
 Name     : clr-bundles
 Version  : 27770
-Release  : 44
+Release  : 45
 URL      : https://github.com/clearlinux/clr-bundles/archive/27770.tar.gz
 Source0  : https://github.com/clearlinux/clr-bundles/archive/27770.tar.gz
 Summary  : No detailed summary available
