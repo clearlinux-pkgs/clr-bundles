@@ -1,5 +1,5 @@
 PKG_NAME := clr-bundles
-URL = https://github.com/clearlinux/clr-bundles/archive/28060.tar.gz
+URL = https://github.com/clearlinux/clr-bundles/archive/28070.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
