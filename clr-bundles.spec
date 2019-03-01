@@ -4,7 +4,7 @@
 #
 Name     : clr-bundles
 Version  : 28070
-Release  : 62
+Release  : 63
 URL      : https://github.com/clearlinux/clr-bundles/archive/28070.tar.gz
 Source0  : https://github.com/clearlinux/clr-bundles/archive/28070.tar.gz
 Summary  : No detailed summary available
@@ -33,14 +33,17 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551394374
+export SOURCE_DATE_EPOCH=1551455495
 make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1551394374
+export SOURCE_DATE_EPOCH=1551455495
 rm -rf %{buildroot}
 %make_install
+## install_append content
+cp -a mappings %{buildroot}/usr/share/clr-bundles/
+## install_append end
 
 %files
 %defattr(-,root,root,-)
@@ -455,6 +458,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/maker-3dprinting
 /usr/share/clr-bundles/maker-cnc
 /usr/share/clr-bundles/maker-gis
+/usr/share/clr-bundles/mappings/pkgconfig.map
 /usr/share/clr-bundles/meld
 /usr/share/clr-bundles/mercurial
 /usr/share/clr-bundles/mixer
