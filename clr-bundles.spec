@@ -4,7 +4,7 @@
 #
 Name     : clr-bundles
 Version  : 28550
-Release  : 89
+Release  : 90
 URL      : https://github.com/clearlinux/clr-bundles/archive/28550/clr-bundles-28550.tar.gz
 Source0  : https://github.com/clearlinux/clr-bundles/archive/28550/clr-bundles-28550.tar.gz
 Summary  : No detailed summary available
@@ -33,12 +33,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1553819792
+export SOURCE_DATE_EPOCH=1553821676
 make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1553819792
+export SOURCE_DATE_EPOCH=1553821676
 rm -rf %{buildroot}
 %make_install
 
