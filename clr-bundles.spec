@@ -4,7 +4,7 @@
 #
 Name     : clr-bundles
 Version  : 34080
-Release  : 382
+Release  : 383
 URL      : https://github.com/clearlinux/clr-bundles/archive/34080/clr-bundles-34080.tar.gz
 Source0  : https://github.com/clearlinux/clr-bundles/archive/34080/clr-bundles-34080.tar.gz
 Summary  : No detailed summary available
