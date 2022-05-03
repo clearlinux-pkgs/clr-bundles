@@ -4,7 +4,7 @@
 #
 Name     : clr-bundles
 Version  : 36260
-Release  : 523
+Release  : 524
 URL      : https://github.com/clearlinux/clr-bundles/archive/36260/clr-bundles-36260.tar.gz
 Source0  : https://github.com/clearlinux/clr-bundles/archive/36260/clr-bundles-36260.tar.gz
 Summary  : No detailed summary available
