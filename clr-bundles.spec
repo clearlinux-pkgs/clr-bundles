@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 38660
-Release  : 664
-URL      : https://github.com/clearlinux/clr-bundles/archive/38660/clr-bundles-38660.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/38660/clr-bundles-38660.tar.gz
+Version  : 38670
+Release  : 665
+URL      : https://github.com/clearlinux/clr-bundles/archive/38670/clr-bundles-38670.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/38670/clr-bundles-38670.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,15 +30,15 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-38660
-cd %{_builddir}/clr-bundles-38660
+%setup -q -n clr-bundles-38670
+cd %{_builddir}/clr-bundles-38670
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680108374
+export SOURCE_DATE_EPOCH=1680141102
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,7 +51,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1680108374
+export SOURCE_DATE_EPOCH=1680141102
 rm -rf %{buildroot}
 %make_install
 
@@ -251,6 +251,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/devpkg-cairo
 /usr/share/clr-bundles/devpkg-cairomm
 /usr/share/clr-bundles/devpkg-capstone
+/usr/share/clr-bundles/devpkg-cfitsio
 /usr/share/clr-bundles/devpkg-cheese
 /usr/share/clr-bundles/devpkg-clutter
 /usr/share/clr-bundles/devpkg-clutter-gst
