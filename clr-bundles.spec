@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 38680
-Release  : 666
-URL      : https://github.com/clearlinux/clr-bundles/archive/38680/clr-bundles-38680.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/38680/clr-bundles-38680.tar.gz
+Version  : 38720
+Release  : 667
+URL      : https://github.com/clearlinux/clr-bundles/archive/38720/clr-bundles-38720.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/38720/clr-bundles-38720.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,15 +30,15 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-38680
-cd %{_builddir}/clr-bundles-38680
+%setup -q -n clr-bundles-38720
+cd %{_builddir}/clr-bundles-38720
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680194812
+export SOURCE_DATE_EPOCH=1680626839
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,7 +51,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1680194812
+export SOURCE_DATE_EPOCH=1680626839
 rm -rf %{buildroot}
 %make_install
 
@@ -739,6 +739,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/gnome-mahjongg
 /usr/share/clr-bundles/gnome-music
 /usr/share/clr-bundles/gnome-photos
+/usr/share/clr-bundles/gnome-remote-desktop
 /usr/share/clr-bundles/gnome-screenshot
 /usr/share/clr-bundles/gnome-system-monitor
 /usr/share/clr-bundles/gnome-text-editor
@@ -1217,6 +1218,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/totem
 /usr/share/clr-bundles/tracker-miners
 /usr/share/clr-bundles/transcoding-support
+/usr/share/clr-bundles/trurl
 /usr/share/clr-bundles/tzdata
 /usr/share/clr-bundles/uget
 /usr/share/clr-bundles/unbundle
