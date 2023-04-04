@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 38720
-Release  : 667
-URL      : https://github.com/clearlinux/clr-bundles/archive/38720/clr-bundles-38720.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/38720/clr-bundles-38720.tar.gz
+Version  : 38730
+Release  : 668
+URL      : https://github.com/clearlinux/clr-bundles/archive/38730/clr-bundles-38730.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/38730/clr-bundles-38730.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,15 +30,15 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-38720
-cd %{_builddir}/clr-bundles-38720
+%setup -q -n clr-bundles-38730
+cd %{_builddir}/clr-bundles-38730
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680626839
+export SOURCE_DATE_EPOCH=1680637738
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,7 +51,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1680626839
+export SOURCE_DATE_EPOCH=1680637738
 rm -rf %{buildroot}
 %make_install
 
@@ -496,6 +496,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/devpkg-libtirpc
 /usr/share/clr-bundles/devpkg-libunibreak
 /usr/share/clr-bundles/devpkg-libunwind
+/usr/share/clr-bundles/devpkg-liburing
 /usr/share/clr-bundles/devpkg-libusb
 /usr/share/clr-bundles/devpkg-libusb-compat
 /usr/share/clr-bundles/devpkg-libuser
