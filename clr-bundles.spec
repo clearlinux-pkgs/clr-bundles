@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 38780
-Release  : 672
-URL      : https://github.com/clearlinux/clr-bundles/archive/38780/clr-bundles-38780.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/38780/clr-bundles-38780.tar.gz
+Version  : 38790
+Release  : 673
+URL      : https://github.com/clearlinux/clr-bundles/archive/38790/clr-bundles-38790.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/38790/clr-bundles-38790.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,15 +30,15 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-38780
-cd %{_builddir}/clr-bundles-38780
+%setup -q -n clr-bundles-38790
+cd %{_builddir}/clr-bundles-38790
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681447375
+export SOURCE_DATE_EPOCH=1681479924
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,7 +51,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1681447375
+export SOURCE_DATE_EPOCH=1681479924
 rm -rf %{buildroot}
 %make_install
 
