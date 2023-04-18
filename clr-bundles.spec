@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 38810
-Release  : 675
-URL      : https://github.com/clearlinux/clr-bundles/archive/38810/clr-bundles-38810.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/38810/clr-bundles-38810.tar.gz
+Version  : 38820
+Release  : 676
+URL      : https://github.com/clearlinux/clr-bundles/archive/38820/clr-bundles-38820.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/38820/clr-bundles-38820.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,15 +30,15 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-38810
-cd %{_builddir}/clr-bundles-38810
+%setup -q -n clr-bundles-38820
+cd %{_builddir}/clr-bundles-38820
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681761213
+export SOURCE_DATE_EPOCH=1681782560
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,7 +51,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1681761213
+export SOURCE_DATE_EPOCH=1681782560
 rm -rf %{buildroot}
 %make_install
 
@@ -1259,6 +1259,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/xfsprogs
 /usr/share/clr-bundles/xorriso
 /usr/share/clr-bundles/xpra
+/usr/share/clr-bundles/xrdp
 /usr/share/clr-bundles/xscreensaver
 /usr/share/clr-bundles/xscreensaver-extras
 /usr/share/clr-bundles/xss-lock
