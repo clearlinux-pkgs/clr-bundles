@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 38860
-Release  : 677
-URL      : https://github.com/clearlinux/clr-bundles/archive/38860/clr-bundles-38860.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/38860/clr-bundles-38860.tar.gz
+Version  : 38890
+Release  : 678
+URL      : https://github.com/clearlinux/clr-bundles/archive/38890/clr-bundles-38890.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/38890/clr-bundles-38890.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,15 +30,15 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-38860
-cd %{_builddir}/clr-bundles-38860
+%setup -q -n clr-bundles-38890
+cd %{_builddir}/clr-bundles-38890
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681934161
+export SOURCE_DATE_EPOCH=1682366010
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,7 +51,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1681934161
+export SOURCE_DATE_EPOCH=1682366010
 rm -rf %{buildroot}
 %make_install
 
@@ -551,6 +551,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/devpkg-oath-toolkit
 /usr/share/clr-bundles/devpkg-oiio
 /usr/share/clr-bundles/devpkg-open-iscsi
+/usr/share/clr-bundles/devpkg-openal-soft
 /usr/share/clr-bundles/devpkg-openblas
 /usr/share/clr-bundles/devpkg-opencv
 /usr/share/clr-bundles/devpkg-openmpi
