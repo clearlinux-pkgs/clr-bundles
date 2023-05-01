@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 38950
-Release  : 680
-URL      : https://github.com/clearlinux/clr-bundles/archive/38950/clr-bundles-38950.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/38950/clr-bundles-38950.tar.gz
+Version  : 38990
+Release  : 681
+URL      : https://github.com/clearlinux/clr-bundles/archive/38990/clr-bundles-38990.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/38990/clr-bundles-38990.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,15 +30,15 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-38950
-cd %{_builddir}/clr-bundles-38950
+%setup -q -n clr-bundles-38990
+cd %{_builddir}/clr-bundles-38990
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682548963
+export SOURCE_DATE_EPOCH=1682959168
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,7 +51,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1682548963
+export SOURCE_DATE_EPOCH=1682959168
 rm -rf %{buildroot}
 %make_install
 
@@ -941,6 +941,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/linux-ltsprev-dev
 /usr/share/clr-bundles/linux-tools
 /usr/share/clr-bundles/lldb
+/usr/share/clr-bundles/lldpd
 /usr/share/clr-bundles/llvm
 /usr/share/clr-bundles/llvm11
 /usr/share/clr-bundles/lm-sensors
@@ -999,6 +1000,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/netdata
 /usr/share/clr-bundles/nethogs
 /usr/share/clr-bundles/netkit-telnet
+/usr/share/clr-bundles/netplan
 /usr/share/clr-bundles/network-basic
 /usr/share/clr-bundles/network-basic-dev
 /usr/share/clr-bundles/network-monitor-node
@@ -1203,6 +1205,7 @@ rm -rf %{buildroot}
 /usr/share/clr-bundles/syslinux
 /usr/share/clr-bundles/sysprof
 /usr/share/clr-bundles/sysstat
+/usr/share/clr-bundles/systemd
 /usr/share/clr-bundles/systemd-networkd-autostart
 /usr/share/clr-bundles/tcl-basic
 /usr/share/clr-bundles/telemetrics
