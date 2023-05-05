@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39040
-Release  : 682
-URL      : https://github.com/clearlinux/clr-bundles/archive/39040/clr-bundles-39040.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39040/clr-bundles-39040.tar.gz
+Version  : 39050
+Release  : 683
+URL      : https://github.com/clearlinux/clr-bundles/archive/39050/clr-bundles-39050.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39050/clr-bundles-39050.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39040
-cd %{_builddir}/clr-bundles-39040
+%setup -q -n clr-bundles-39050
+cd %{_builddir}/clr-bundles-39050
 pushd ..
-cp -a clr-bundles-39040 buildavx2
+cp -a clr-bundles-39050 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683219127
+export SOURCE_DATE_EPOCH=1683316863
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1683219127
+export SOURCE_DATE_EPOCH=1683316863
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -727,6 +727,7 @@ popd
 /usr/share/clr-bundles/games-dev
 /usr/share/clr-bundles/gdal
 /usr/share/clr-bundles/gdb
+/usr/share/clr-bundles/gdk-pixbuf
 /usr/share/clr-bundles/geany
 /usr/share/clr-bundles/geary
 /usr/share/clr-bundles/gedit
@@ -1125,6 +1126,7 @@ popd
 /usr/share/clr-bundles/pypi-cython
 /usr/share/clr-bundles/pypi-onnx
 /usr/share/clr-bundles/pypi-pygame
+/usr/share/clr-bundles/pypi-pynacl
 /usr/share/clr-bundles/python-basic
 /usr/share/clr-bundles/python-data-science
 /usr/share/clr-bundles/python-extras
