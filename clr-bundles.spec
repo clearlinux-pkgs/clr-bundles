@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39050
-Release  : 683
-URL      : https://github.com/clearlinux/clr-bundles/archive/39050/clr-bundles-39050.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39050/clr-bundles-39050.tar.gz
+Version  : 39090
+Release  : 684
+URL      : https://github.com/clearlinux/clr-bundles/archive/39090/clr-bundles-39090.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39090/clr-bundles-39090.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39050
-cd %{_builddir}/clr-bundles-39050
+%setup -q -n clr-bundles-39090
+cd %{_builddir}/clr-bundles-39090
 pushd ..
-cp -a clr-bundles-39050 buildavx2
+cp -a clr-bundles-39090 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683316863
+export SOURCE_DATE_EPOCH=1683759288
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1683316863
+export SOURCE_DATE_EPOCH=1683759288
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -78,6 +78,7 @@ popd
 /usr/share/clr-bundles/AOSP-dev
 /usr/share/clr-bundles/Babel
 /usr/share/clr-bundles/CopyQ
+/usr/share/clr-bundles/FreeRDP
 /usr/share/clr-bundles/Gradio
 /usr/share/clr-bundles/ImageMagick
 /usr/share/clr-bundles/LibreCAD
@@ -199,6 +200,8 @@ popd
 /usr/share/clr-bundles/curl
 /usr/share/clr-bundles/cve-bin-tool
 /usr/share/clr-bundles/darktable
+/usr/share/clr-bundles/dav1d
+/usr/share/clr-bundles/dav1d-lib
 /usr/share/clr-bundles/ddd
 /usr/share/clr-bundles/desktop
 /usr/share/clr-bundles/desktop-apps
@@ -793,6 +796,7 @@ popd
 /usr/share/clr-bundles/hardware-printing
 /usr/share/clr-bundles/hardware-uefi
 /usr/share/clr-bundles/hardware-wifi
+/usr/share/clr-bundles/harfbuzz-lib
 /usr/share/clr-bundles/haskell-basic
 /usr/share/clr-bundles/haveged
 /usr/share/clr-bundles/hexchat
@@ -805,6 +809,7 @@ popd
 /usr/share/clr-bundles/iasimage
 /usr/share/clr-bundles/icdiff
 /usr/share/clr-bundles/icecream
+/usr/share/clr-bundles/icu4c-lib
 /usr/share/clr-bundles/iftop
 /usr/share/clr-bundles/igt-gpu-tools
 /usr/share/clr-bundles/iio-sensor-proxy
@@ -923,9 +928,11 @@ popd
 /usr/share/clr-bundles/libX11client
 /usr/share/clr-bundles/libarchive
 /usr/share/clr-bundles/libdeps
+/usr/share/clr-bundles/libevent-lib
 /usr/share/clr-bundles/libglib
 /usr/share/clr-bundles/libgsf
 /usr/share/clr-bundles/libnl
+/usr/share/clr-bundles/libpsl-lib
 /usr/share/clr-bundles/libreoffice
 /usr/share/clr-bundles/libreoffice-extras-lang-ar
 /usr/share/clr-bundles/libreoffice-extras-lang-de
@@ -1010,6 +1017,7 @@ popd
 /usr/share/clr-bundles/nautilus
 /usr/share/clr-bundles/ncat
 /usr/share/clr-bundles/ncdu
+/usr/share/clr-bundles/ncurses-lib
 /usr/share/clr-bundles/neomutt
 /usr/share/clr-bundles/neovim
 /usr/share/clr-bundles/net-tools
@@ -1124,6 +1132,7 @@ popd
 /usr/share/clr-bundles/pxe-server
 /usr/share/clr-bundles/pygobject
 /usr/share/clr-bundles/pypi-cython
+/usr/share/clr-bundles/pypi-numpy
 /usr/share/clr-bundles/pypi-onnx
 /usr/share/clr-bundles/pypi-pygame
 /usr/share/clr-bundles/pypi-pynacl
