@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39090
-Release  : 684
-URL      : https://github.com/clearlinux/clr-bundles/archive/39090/clr-bundles-39090.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39090/clr-bundles-39090.tar.gz
+Version  : 39100
+Release  : 685
+URL      : https://github.com/clearlinux/clr-bundles/archive/39100/clr-bundles-39100.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39100/clr-bundles-39100.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39090
-cd %{_builddir}/clr-bundles-39090
+%setup -q -n clr-bundles-39100
+cd %{_builddir}/clr-bundles-39100
 pushd ..
-cp -a clr-bundles-39090 buildavx2
+cp -a clr-bundles-39100 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683759288
+export SOURCE_DATE_EPOCH=1683824034
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1683759288
+export SOURCE_DATE_EPOCH=1683824034
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -604,6 +604,8 @@ popd
 /usr/share/clr-bundles/devpkg-pygobject
 /usr/share/clr-bundles/devpkg-qpdf
 /usr/share/clr-bundles/devpkg-qt3d
+/usr/share/clr-bundles/devpkg-qt6base
+/usr/share/clr-bundles/devpkg-qt6svg
 /usr/share/clr-bundles/devpkg-qtbase
 /usr/share/clr-bundles/devpkg-qtdeclarative
 /usr/share/clr-bundles/devpkg-qtlocation
@@ -744,6 +746,7 @@ popd
 /usr/share/clr-bundles/glibc-locale
 /usr/share/clr-bundles/glmark2
 /usr/share/clr-bundles/global
+/usr/share/clr-bundles/gmp-lib
 /usr/share/clr-bundles/gmsh
 /usr/share/clr-bundles/gnome-base-libs
 /usr/share/clr-bundles/gnome-boxes
@@ -932,6 +935,7 @@ popd
 /usr/share/clr-bundles/libglib
 /usr/share/clr-bundles/libgsf
 /usr/share/clr-bundles/libnl
+/usr/share/clr-bundles/libpcap-lib
 /usr/share/clr-bundles/libpsl-lib
 /usr/share/clr-bundles/libreoffice
 /usr/share/clr-bundles/libreoffice-extras-lang-ar
@@ -1136,6 +1140,7 @@ popd
 /usr/share/clr-bundles/pypi-onnx
 /usr/share/clr-bundles/pypi-pygame
 /usr/share/clr-bundles/pypi-pynacl
+/usr/share/clr-bundles/pypi-six
 /usr/share/clr-bundles/python-basic
 /usr/share/clr-bundles/python-data-science
 /usr/share/clr-bundles/python-extras
@@ -1155,6 +1160,8 @@ popd
 /usr/share/clr-bundles/qt5-dev
 /usr/share/clr-bundles/qt5-examples
 /usr/share/clr-bundles/qt5ct
+/usr/share/clr-bundles/qt6-basic
+/usr/share/clr-bundles/qt6-core
 /usr/share/clr-bundles/quagga
 /usr/share/clr-bundles/quassel
 /usr/share/clr-bundles/quasselcore
