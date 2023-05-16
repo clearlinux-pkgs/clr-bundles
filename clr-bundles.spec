@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39110
-Release  : 686
-URL      : https://github.com/clearlinux/clr-bundles/archive/39110/clr-bundles-39110.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39110/clr-bundles-39110.tar.gz
+Version  : 39140
+Release  : 687
+URL      : https://github.com/clearlinux/clr-bundles/archive/39140/clr-bundles-39140.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39140/clr-bundles-39140.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39110
-cd %{_builddir}/clr-bundles-39110
+%setup -q -n clr-bundles-39140
+cd %{_builddir}/clr-bundles-39140
 pushd ..
-cp -a clr-bundles-39110 buildavx2
+cp -a clr-bundles-39140 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683866585
+export SOURCE_DATE_EPOCH=1684255924
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1683866585
+export SOURCE_DATE_EPOCH=1684255924
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -946,6 +946,7 @@ popd
 /usr/share/clr-bundles/libreoffice-extras-lang-tr
 /usr/share/clr-bundles/libreoffice-extras-lang-zh
 /usr/share/clr-bundles/libstdcpp
+/usr/share/clr-bundles/libunwind-lib
 /usr/share/clr-bundles/libva-utils
 /usr/share/clr-bundles/libxml2
 /usr/share/clr-bundles/libxslt
@@ -1029,6 +1030,7 @@ popd
 /usr/share/clr-bundles/nethogs
 /usr/share/clr-bundles/netkit-telnet
 /usr/share/clr-bundles/netplan
+/usr/share/clr-bundles/nettle-lib
 /usr/share/clr-bundles/network-basic
 /usr/share/clr-bundles/network-basic-dev
 /usr/share/clr-bundles/network-monitor-node
@@ -1043,9 +1045,11 @@ popd
 /usr/share/clr-bundles/nload
 /usr/share/clr-bundles/nmap
 /usr/share/clr-bundles/nodejs-basic
+/usr/share/clr-bundles/not-ffmpeg-lib
 /usr/share/clr-bundles/notmuch
 /usr/share/clr-bundles/npb
 /usr/share/clr-bundles/ntopng
+/usr/share/clr-bundles/numactl
 /usr/share/clr-bundles/obs-studio
 /usr/share/clr-bundles/ocaml-basic
 /usr/share/clr-bundles/octave
@@ -1142,6 +1146,7 @@ popd
 /usr/share/clr-bundles/pypi-onnx
 /usr/share/clr-bundles/pypi-pygame
 /usr/share/clr-bundles/pypi-pynacl
+/usr/share/clr-bundles/pypi-requests
 /usr/share/clr-bundles/pypi-six
 /usr/share/clr-bundles/python-basic
 /usr/share/clr-bundles/python-data-science
@@ -1280,6 +1285,7 @@ popd
 /usr/share/clr-bundles/vlc
 /usr/share/clr-bundles/vnc-server
 /usr/share/clr-bundles/vpp
+/usr/share/clr-bundles/vte-lib
 /usr/share/clr-bundles/wayland-server
 /usr/share/clr-bundles/webkitgtk
 /usr/share/clr-bundles/weechat
@@ -1305,6 +1311,7 @@ popd
 /usr/share/clr-bundles/xterm
 /usr/share/clr-bundles/xz
 /usr/share/clr-bundles/yakuake
+/usr/share/clr-bundles/yaml
 /usr/share/clr-bundles/yasm
 /usr/share/clr-bundles/yq
 /usr/share/clr-bundles/zabbix
