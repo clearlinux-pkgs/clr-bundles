@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39150
-Release  : 688
-URL      : https://github.com/clearlinux/clr-bundles/archive/39150/clr-bundles-39150.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39150/clr-bundles-39150.tar.gz
+Version  : 39210
+Release  : 689
+URL      : https://github.com/clearlinux/clr-bundles/archive/39210/clr-bundles-39210.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39210/clr-bundles-39210.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39150
-cd %{_builddir}/clr-bundles-39150
+%setup -q -n clr-bundles-39210
+cd %{_builddir}/clr-bundles-39210
 pushd ..
-cp -a clr-bundles-39150 buildavx2
+cp -a clr-bundles-39210 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684287275
+export SOURCE_DATE_EPOCH=1684871026
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1684287275
+export SOURCE_DATE_EPOCH=1684871026
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -81,6 +81,7 @@ popd
 /usr/share/clr-bundles/FreeRDP
 /usr/share/clr-bundles/Gradio
 /usr/share/clr-bundles/ImageMagick
+/usr/share/clr-bundles/LibRaw-lib
 /usr/share/clr-bundles/LibreCAD
 /usr/share/clr-bundles/LyX
 /usr/share/clr-bundles/MuseScore
@@ -88,6 +89,7 @@ popd
 /usr/share/clr-bundles/NetworkManager-extras
 /usr/share/clr-bundles/NetworkManager-tui
 /usr/share/clr-bundles/ParaView
+/usr/share/clr-bundles/PyYAML
 /usr/share/clr-bundles/R-basic
 /usr/share/clr-bundles/R-datasets
 /usr/share/clr-bundles/R-extras
@@ -134,6 +136,7 @@ popd
 /usr/share/clr-bundles/bc
 /usr/share/clr-bundles/bcache-tools
 /usr/share/clr-bundles/bcc
+/usr/share/clr-bundles/bcc-lib
 /usr/share/clr-bundles/bemenu
 /usr/share/clr-bundles/bijiben
 /usr/share/clr-bundles/binutils
@@ -174,6 +177,7 @@ popd
 /usr/share/clr-bundles/cloud-control
 /usr/share/clr-bundles/cloud-native-basic
 /usr/share/clr-bundles/clr-devops
+/usr/share/clr-bundles/clr-hardware-files
 /usr/share/clr-bundles/clr-installer
 /usr/share/clr-bundles/clr-installer-dev
 /usr/share/clr-bundles/clr-installer-gui
@@ -202,6 +206,7 @@ popd
 /usr/share/clr-bundles/darktable
 /usr/share/clr-bundles/dav1d
 /usr/share/clr-bundles/dav1d-lib
+/usr/share/clr-bundles/dbus-lib
 /usr/share/clr-bundles/ddd
 /usr/share/clr-bundles/desktop
 /usr/share/clr-bundles/desktop-apps
@@ -274,6 +279,7 @@ popd
 /usr/share/clr-bundles/devpkg-avahi
 /usr/share/clr-bundles/devpkg-babeltrace
 /usr/share/clr-bundles/devpkg-babl
+/usr/share/clr-bundles/devpkg-baloo
 /usr/share/clr-bundles/devpkg-base
 /usr/share/clr-bundles/devpkg-bash-completion
 /usr/share/clr-bundles/devpkg-bcc
@@ -453,6 +459,7 @@ popd
 /usr/share/clr-bundles/devpkg-kmod
 /usr/share/clr-bundles/devpkg-krb5
 /usr/share/clr-bundles/devpkg-kronosnet
+/usr/share/clr-bundles/devpkg-kwayland
 /usr/share/clr-bundles/devpkg-kyotocabinet
 /usr/share/clr-bundles/devpkg-lcms2
 /usr/share/clr-bundles/devpkg-ldb
@@ -831,6 +838,7 @@ popd
 /usr/share/clr-bundles/devpkg-wayland
 /usr/share/clr-bundles/devpkg-wayland-protocols
 /usr/share/clr-bundles/devpkg-webkitgtk
+/usr/share/clr-bundles/devpkg-weston
 /usr/share/clr-bundles/devpkg-wlroots
 /usr/share/clr-bundles/devpkg-woff2
 /usr/share/clr-bundles/devpkg-wxWidgets
@@ -857,6 +865,7 @@ popd
 /usr/share/clr-bundles/devpkg-yelp-xsl
 /usr/share/clr-bundles/devpkg-zlib
 /usr/share/clr-bundles/devpkg-zstd
+/usr/share/clr-bundles/devpkg-zxing
 /usr/share/clr-bundles/dfu-util
 /usr/share/clr-bundles/dhcp-server
 /usr/share/clr-bundles/diffoscope
@@ -1322,6 +1331,7 @@ popd
 /usr/share/clr-bundles/podman
 /usr/share/clr-bundles/polkit
 /usr/share/clr-bundles/poppler
+/usr/share/clr-bundles/popt-lib
 /usr/share/clr-bundles/postfix
 /usr/share/clr-bundles/postgresql
 /usr/share/clr-bundles/powertop
@@ -1334,6 +1344,7 @@ popd
 /usr/share/clr-bundles/pwgen
 /usr/share/clr-bundles/pxe-server
 /usr/share/clr-bundles/pygobject
+/usr/share/clr-bundles/pypi-b4
 /usr/share/clr-bundles/pypi-cython
 /usr/share/clr-bundles/pypi-numpy
 /usr/share/clr-bundles/pypi-onnx
@@ -1493,6 +1504,7 @@ popd
 /usr/share/clr-bundles/x11-tools
 /usr/share/clr-bundles/x11vnc
 /usr/share/clr-bundles/xdg-desktop-portal
+/usr/share/clr-bundles/xdg-desktop-portal-gnome
 /usr/share/clr-bundles/xfce4-desktop
 /usr/share/clr-bundles/xfsprogs
 /usr/share/clr-bundles/xorriso
