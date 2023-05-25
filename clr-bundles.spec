@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39210
-Release  : 689
-URL      : https://github.com/clearlinux/clr-bundles/archive/39210/clr-bundles-39210.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39210/clr-bundles-39210.tar.gz
+Version  : 39220
+Release  : 690
+URL      : https://github.com/clearlinux/clr-bundles/archive/39220/clr-bundles-39220.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39220/clr-bundles-39220.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39210
-cd %{_builddir}/clr-bundles-39210
+%setup -q -n clr-bundles-39220
+cd %{_builddir}/clr-bundles-39220
 pushd ..
-cp -a clr-bundles-39210 buildavx2
+cp -a clr-bundles-39220 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684871026
+export SOURCE_DATE_EPOCH=1685055076
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1684871026
+export SOURCE_DATE_EPOCH=1685055076
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -976,6 +976,7 @@ popd
 /usr/share/clr-bundles/go-basic
 /usr/share/clr-bundles/go-basic-dev
 /usr/share/clr-bundles/goaccess
+/usr/share/clr-bundles/gobject-introspection
 /usr/share/clr-bundles/gparted
 /usr/share/clr-bundles/gpaste
 /usr/share/clr-bundles/gpgme
