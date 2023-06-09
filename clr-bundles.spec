@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39230
-Release  : 691
-URL      : https://github.com/clearlinux/clr-bundles/archive/39230/clr-bundles-39230.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39230/clr-bundles-39230.tar.gz
+Version  : 39340
+Release  : 692
+URL      : https://github.com/clearlinux/clr-bundles/archive/39340/clr-bundles-39340.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39340/clr-bundles-39340.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39230
-cd %{_builddir}/clr-bundles-39230
+%setup -q -n clr-bundles-39340
+cd %{_builddir}/clr-bundles-39340
 pushd ..
-cp -a clr-bundles-39230 buildavx2
+cp -a clr-bundles-39340 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685119640
+export SOURCE_DATE_EPOCH=1686296265
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1685119640
+export SOURCE_DATE_EPOCH=1686296265
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -78,6 +78,7 @@ popd
 /usr/share/clr-bundles/AOSP-dev
 /usr/share/clr-bundles/Babel
 /usr/share/clr-bundles/CopyQ
+/usr/share/clr-bundles/Endeavour
 /usr/share/clr-bundles/FreeRDP
 /usr/share/clr-bundles/Gradio
 /usr/share/clr-bundles/ImageMagick
@@ -939,6 +940,7 @@ popd
 /usr/share/clr-bundles/geary
 /usr/share/clr-bundles/gedit
 /usr/share/clr-bundles/geeqie
+/usr/share/clr-bundles/gegl
 /usr/share/clr-bundles/gftp
 /usr/share/clr-bundles/gh
 /usr/share/clr-bundles/ghostscript
@@ -980,6 +982,7 @@ popd
 /usr/share/clr-bundles/gparted
 /usr/share/clr-bundles/gpaste
 /usr/share/clr-bundles/gpgme
+/usr/share/clr-bundles/gphoto
 /usr/share/clr-bundles/gphoto2
 /usr/share/clr-bundles/gpsd
 /usr/share/clr-bundles/gramps
@@ -1021,6 +1024,7 @@ popd
 /usr/share/clr-bundles/iio-sensor-proxy
 /usr/share/clr-bundles/inkscape
 /usr/share/clr-bundles/inotify-tools
+/usr/share/clr-bundles/intel-one-mono
 /usr/share/clr-bundles/intltool
 /usr/share/clr-bundles/iotop
 /usr/share/clr-bundles/ipe
@@ -1103,6 +1107,7 @@ popd
 /usr/share/clr-bundles/kitinerary
 /usr/share/clr-bundles/kleopatra
 /usr/share/clr-bundles/kmediaplayer
+/usr/share/clr-bundles/kmime
 /usr/share/clr-bundles/kmousetool
 /usr/share/clr-bundles/kmplot
 /usr/share/clr-bundles/knotes
@@ -1132,6 +1137,7 @@ popd
 /usr/share/clr-bundles/lib-qt5webengine
 /usr/share/clr-bundles/lib-samba
 /usr/share/clr-bundles/libX11client
+/usr/share/clr-bundles/libXpm-lib
 /usr/share/clr-bundles/libarchive
 /usr/share/clr-bundles/libdeps
 /usr/share/clr-bundles/libevent-lib
@@ -1148,6 +1154,8 @@ popd
 /usr/share/clr-bundles/libreoffice-extras-lang-hi
 /usr/share/clr-bundles/libreoffice-extras-lang-tr
 /usr/share/clr-bundles/libreoffice-extras-lang-zh
+/usr/share/clr-bundles/libssh-lib
+/usr/share/clr-bundles/libssh2-lib
 /usr/share/clr-bundles/libstdcpp
 /usr/share/clr-bundles/libunwind-lib
 /usr/share/clr-bundles/libva-utils
