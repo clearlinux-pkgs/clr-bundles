@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39400
-Release  : 695
-URL      : https://github.com/clearlinux/clr-bundles/archive/39400/clr-bundles-39400.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39400/clr-bundles-39400.tar.gz
+Version  : 39420
+Release  : 696
+URL      : https://github.com/clearlinux/clr-bundles/archive/39420/clr-bundles-39420.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39420/clr-bundles-39420.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39400
-cd %{_builddir}/clr-bundles-39400
+%setup -q -n clr-bundles-39420
+cd %{_builddir}/clr-bundles-39420
 pushd ..
-cp -a clr-bundles-39400 buildavx2
+cp -a clr-bundles-39420 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686847466
+export SOURCE_DATE_EPOCH=1687312047
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1686847466
+export SOURCE_DATE_EPOCH=1687312047
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -1348,6 +1348,7 @@ popd
 /usr/share/clr-bundles/procps-ng
 /usr/share/clr-bundles/productivity
 /usr/share/clr-bundles/protobuf
+/usr/share/clr-bundles/protobuf-lib
 /usr/share/clr-bundles/psensor
 /usr/share/clr-bundles/pspp
 /usr/share/clr-bundles/pulseaudio
