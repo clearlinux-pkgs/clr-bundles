@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39620
-Release  : 705
-URL      : https://github.com/clearlinux/clr-bundles/archive/39620/clr-bundles-39620.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39620/clr-bundles-39620.tar.gz
+Version  : 39630
+Release  : 706
+URL      : https://github.com/clearlinux/clr-bundles/archive/39630/clr-bundles-39630.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39630/clr-bundles-39630.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39620
-cd %{_builddir}/clr-bundles-39620
+%setup -q -n clr-bundles-39630
+cd %{_builddir}/clr-bundles-39630
 pushd ..
-cp -a clr-bundles-39620 buildavx2
+cp -a clr-bundles-39630 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689267047
+export SOURCE_DATE_EPOCH=1689364245
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1689267047
+export SOURCE_DATE_EPOCH=1689364245
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -526,6 +526,7 @@ popd
 /usr/share/clr-bundles/devpkg-libdbusmenu-qt
 /usr/share/clr-bundles/devpkg-libdmx
 /usr/share/clr-bundles/devpkg-libdrm
+/usr/share/clr-bundles/devpkg-libeconf
 /usr/share/clr-bundles/devpkg-libedit
 /usr/share/clr-bundles/devpkg-libepoxy
 /usr/share/clr-bundles/devpkg-libevdev
