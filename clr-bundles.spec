@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39630
-Release  : 706
-URL      : https://github.com/clearlinux/clr-bundles/archive/39630/clr-bundles-39630.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39630/clr-bundles-39630.tar.gz
+Version  : 39670
+Release  : 707
+URL      : https://github.com/clearlinux/clr-bundles/archive/39670/clr-bundles-39670.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39670/clr-bundles-39670.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39630
-cd %{_builddir}/clr-bundles-39630
+%setup -q -n clr-bundles-39670
+cd %{_builddir}/clr-bundles-39670
 pushd ..
-cp -a clr-bundles-39630 buildavx2
+cp -a clr-bundles-39670 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689364245
+export SOURCE_DATE_EPOCH=1689904263
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1689364245
+export SOURCE_DATE_EPOCH=1689904263
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -793,6 +793,7 @@ popd
 /usr/share/clr-bundles/devpkg-sbc
 /usr/share/clr-bundles/devpkg-scdoc
 /usr/share/clr-bundles/devpkg-seatd
+/usr/share/clr-bundles/devpkg-serf
 /usr/share/clr-bundles/devpkg-shapelib
 /usr/share/clr-bundles/devpkg-shared-mime-info
 /usr/share/clr-bundles/devpkg-slang
@@ -816,6 +817,7 @@ popd
 /usr/share/clr-bundles/devpkg-telepathy-glib
 /usr/share/clr-bundles/devpkg-tesseract
 /usr/share/clr-bundles/devpkg-tevent
+/usr/share/clr-bundles/devpkg-texlive
 /usr/share/clr-bundles/devpkg-thrift
 /usr/share/clr-bundles/devpkg-tiff
 /usr/share/clr-bundles/devpkg-tk
@@ -1027,6 +1029,7 @@ popd
 /usr/share/clr-bundles/iio-sensor-proxy
 /usr/share/clr-bundles/inkscape
 /usr/share/clr-bundles/inotify-tools
+/usr/share/clr-bundles/input-leap
 /usr/share/clr-bundles/intel-one-mono
 /usr/share/clr-bundles/intltool
 /usr/share/clr-bundles/iotop
@@ -1455,6 +1458,7 @@ popd
 /usr/share/clr-bundles/suricata
 /usr/share/clr-bundles/sway
 /usr/share/clr-bundles/sxiv
+/usr/share/clr-bundles/syncthing
 /usr/share/clr-bundles/syndication
 /usr/share/clr-bundles/synergy
 /usr/share/clr-bundles/sysadmin-basic
