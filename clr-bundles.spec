@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39780
-Release  : 712
-URL      : https://github.com/clearlinux/clr-bundles/archive/39780/clr-bundles-39780.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39780/clr-bundles-39780.tar.gz
+Version  : 39790
+Release  : 713
+URL      : https://github.com/clearlinux/clr-bundles/archive/39790/clr-bundles-39790.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/39790/clr-bundles-39790.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39780
-cd %{_builddir}/clr-bundles-39780
+%setup -q -n clr-bundles-39790
+cd %{_builddir}/clr-bundles-39790
 pushd ..
-cp -a clr-bundles-39780 buildavx2
+cp -a clr-bundles-39790 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691653561
+export SOURCE_DATE_EPOCH=1692053629
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1691653561
+export SOURCE_DATE_EPOCH=1692053629
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -1351,6 +1351,7 @@ popd
 /usr/share/clr-bundles/popt-lib
 /usr/share/clr-bundles/postfix
 /usr/share/clr-bundles/postgresql
+/usr/share/clr-bundles/postgresql-lib
 /usr/share/clr-bundles/powertop
 /usr/share/clr-bundles/procps-ng
 /usr/share/clr-bundles/productivity
@@ -1373,6 +1374,7 @@ popd
 /usr/share/clr-bundles/python-basic
 /usr/share/clr-bundles/python-data-science
 /usr/share/clr-bundles/python-extras
+/usr/share/clr-bundles/python-graphics
 /usr/share/clr-bundles/python-qt
 /usr/share/clr-bundles/python-testing
 /usr/share/clr-bundles/python3-basic
