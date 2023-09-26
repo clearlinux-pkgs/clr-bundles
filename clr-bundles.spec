@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 39980
-Release  : 729
-URL      : https://github.com/clearlinux/clr-bundles/archive/39980/clr-bundles-39980.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/39980/clr-bundles-39980.tar.gz
+Version  : 40010
+Release  : 730
+URL      : https://github.com/clearlinux/clr-bundles/archive/40010/clr-bundles-40010.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/40010/clr-bundles-40010.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-39980
-cd %{_builddir}/clr-bundles-39980
+%setup -q -n clr-bundles-40010
+cd %{_builddir}/clr-bundles-40010
 pushd ..
-cp -a clr-bundles-39980 buildavx2
+cp -a clr-bundles-40010 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1695304423
+export SOURCE_DATE_EPOCH=1695759791
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -62,7 +62,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1695304423
+export SOURCE_DATE_EPOCH=1695759791
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -926,6 +926,7 @@ popd
 /usr/share/clr-bundles/flatpak
 /usr/share/clr-bundles/flex
 /usr/share/clr-bundles/fluidsynth
+/usr/share/clr-bundles/fontconfig
 /usr/share/clr-bundles/fontforge
 /usr/share/clr-bundles/fonts-basic
 /usr/share/clr-bundles/fonttools
@@ -1191,6 +1192,7 @@ popd
 /usr/share/clr-bundles/llvm11
 /usr/share/clr-bundles/lm-sensors
 /usr/share/clr-bundles/logrotate
+/usr/share/clr-bundles/lsof
 /usr/share/clr-bundles/ltp
 /usr/share/clr-bundles/lttng
 /usr/share/clr-bundles/lua-basic
