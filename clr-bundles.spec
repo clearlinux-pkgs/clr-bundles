@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-bundles
-Version  : 40070
-Release  : 735
-URL      : https://github.com/clearlinux/clr-bundles/archive/40070/clr-bundles-40070.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/40070/clr-bundles-40070.tar.gz
+Version  : 40090
+Release  : 736
+URL      : https://github.com/clearlinux/clr-bundles/archive/40090/clr-bundles-40090.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/40090/clr-bundles-40090.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-40070
-cd %{_builddir}/clr-bundles-40070
+%setup -q -n clr-bundles-40090
+cd %{_builddir}/clr-bundles-40090
 pushd ..
-cp -a clr-bundles-40070 buildavx2
+cp -a clr-bundles-40090 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696956308
+export SOURCE_DATE_EPOCH=1696988809
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -82,7 +82,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696956308
+export SOURCE_DATE_EPOCH=1696988809
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
