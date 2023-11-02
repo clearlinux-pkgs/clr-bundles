@@ -6,10 +6,10 @@
 # autospec commit: 250a666
 #
 Name     : clr-bundles
-Version  : 40290
-Release  : 745
-URL      : https://github.com/clearlinux/clr-bundles/archive/40290/clr-bundles-40290.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/40290/clr-bundles-40290.tar.gz
+Version  : 40300
+Release  : 746
+URL      : https://github.com/clearlinux/clr-bundles/archive/40300/clr-bundles-40300.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/40300/clr-bundles-40300.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-40290
-cd %{_builddir}/clr-bundles-40290
+%setup -q -n clr-bundles-40300
+cd %{_builddir}/clr-bundles-40300
 pushd ..
-cp -a clr-bundles-40290 buildavx2
+cp -a clr-bundles-40300 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1698900037
+export SOURCE_DATE_EPOCH=1698943808
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,7 +84,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1698900037
+export SOURCE_DATE_EPOCH=1698943808
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
