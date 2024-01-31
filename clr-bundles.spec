@@ -6,10 +6,10 @@
 # autospec commit: fae1327
 #
 Name     : clr-bundles
-Version  : 40710
-Release  : 777
-URL      : https://github.com/clearlinux/clr-bundles/archive/40710/clr-bundles-40710.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/40710/clr-bundles-40710.tar.gz
+Version  : 40740
+Release  : 778
+URL      : https://github.com/clearlinux/clr-bundles/archive/40740/clr-bundles-40740.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/40740/clr-bundles-40740.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-40710
-cd %{_builddir}/clr-bundles-40710
+%setup -q -n clr-bundles-40740
+cd %{_builddir}/clr-bundles-40740
 pushd ..
-cp -a clr-bundles-40710 buildavx2
+cp -a clr-bundles-40740 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1706636818
+export SOURCE_DATE_EPOCH=1706734774
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,7 +84,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1706636818
+export SOURCE_DATE_EPOCH=1706734774
 rm -rf %{buildroot}
 pushd ../buildavx2/
 %make_install_v3
@@ -1138,6 +1138,8 @@ popd
 /usr/share/clr-bundles/kfind
 /usr/share/clr-bundles/kfloppy
 /usr/share/clr-bundles/kgeography
+/usr/share/clr-bundles/kicad
+/usr/share/clr-bundles/kicad-packages3D
 /usr/share/clr-bundles/kitinerary
 /usr/share/clr-bundles/kleopatra
 /usr/share/clr-bundles/kmediaplayer
@@ -1180,6 +1182,7 @@ popd
 /usr/share/clr-bundles/libnl
 /usr/share/clr-bundles/libpcap-lib
 /usr/share/clr-bundles/libpsl-lib
+/usr/share/clr-bundles/libratbag
 /usr/share/clr-bundles/libreoffice
 /usr/share/clr-bundles/libreoffice-extras-lang-ar
 /usr/share/clr-bundles/libreoffice-extras-lang-de
