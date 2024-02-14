@@ -6,10 +6,10 @@
 # autospec commit: da8b975
 #
 Name     : clr-bundles
-Version  : 40830
-Release  : 781
-URL      : https://github.com/clearlinux/clr-bundles/archive/40830/clr-bundles-40830.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/40830/clr-bundles-40830.tar.gz
+Version  : 40950
+Release  : 782
+URL      : https://github.com/clearlinux/clr-bundles/archive/40950/clr-bundles-40950.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/40950/clr-bundles-40950.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,13 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-40830
-cd %{_builddir}/clr-bundles-40830
+%setup -q -n clr-bundles-40950
+cd %{_builddir}/clr-bundles-40950
 pushd ..
-cp -a clr-bundles-40830 buildavx2
-popd
-pushd ..
-cp -a clr-bundles-40830 buildapx
+cp -a clr-bundles-40950 buildavx2
 popd
 
 %build
@@ -46,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707522694
+export SOURCE_DATE_EPOCH=1707932469
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -73,16 +70,6 @@ FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS -march=x86-64-v3 "
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS -march=x86-64-v3 "
 make  %{?_smp_mflags}
 popd
-pushd ../buildapx
-GOAMD64=v3
-CC=gcc-14
-CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -march=x86-64-v3 -mapxf -mavx10.1 -Wl,-z,x86-64-v3 "
-CXXFLAGS="$CLEAR_INTERMEDIATE_CXXFLAGS -march=x86-64-v3 -Wl,-z,x86-64-v3 "
-FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -march=x86-64-v3 -mapxf -mavx10.1 -Wl,-z,x86-64-v3 "
-FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS -march=x86-64-v3 -mapxf -mavx10.1 "
-LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS -march=x86-64-v3 "
-make  %{?_smp_mflags}
-popd
 
 %install
 export GCC_IGNORE_WERROR=1
@@ -99,21 +86,16 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1707522694
+export SOURCE_DATE_EPOCH=1707932469
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
 pushd ../buildavx2/
 %make_install_v3
 popd
-GOAMD64=v3
-pushd ../buildapx/
-%make_install_va
-popd
 GOAMD64=v2
 %make_install
 /usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
-/usr/bin/elf-move.py apx %{buildroot}-va %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -277,6 +259,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/devhelp
 /usr/share/clr-bundles/devpkg-Botan
 /usr/share/clr-bundles/devpkg-CUnit
+/usr/share/clr-bundles/devpkg-FreeRDP
 /usr/share/clr-bundles/devpkg-GConf
 /usr/share/clr-bundles/devpkg-ImageMagick
 /usr/share/clr-bundles/devpkg-Imath
@@ -761,6 +744,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/devpkg-openssl
 /usr/share/clr-bundles/devpkg-openvswitch
 /usr/share/clr-bundles/devpkg-opus
+/usr/share/clr-bundles/devpkg-opusfile
 /usr/share/clr-bundles/devpkg-orc
 /usr/share/clr-bundles/devpkg-ostree
 /usr/share/clr-bundles/devpkg-otp
