@@ -6,10 +6,10 @@
 # autospec commit: da8b975
 #
 Name     : clr-bundles
-Version  : 41040
-Release  : 784
-URL      : https://github.com/clearlinux/clr-bundles/archive/41040/clr-bundles-41040.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/41040/clr-bundles-41040.tar.gz
+Version  : 41090
+Release  : 785
+URL      : https://github.com/clearlinux/clr-bundles/archive/41090/clr-bundles-41090.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/41090/clr-bundles-41090.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-41040
-cd %{_builddir}/clr-bundles-41040
+%setup -q -n clr-bundles-41090
+cd %{_builddir}/clr-bundles-41090
 pushd ..
-cp -a clr-bundles-41040 buildavx2
+cp -a clr-bundles-41090 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1708052000
+export SOURCE_DATE_EPOCH=1708451166
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1708052000
+export SOURCE_DATE_EPOCH=1708451166
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -1284,6 +1284,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/neomutt
 /usr/share/clr-bundles/neovim
 /usr/share/clr-bundles/net-tools
+/usr/share/clr-bundles/netcdf-fortran
 /usr/share/clr-bundles/netdata
 /usr/share/clr-bundles/nethogs
 /usr/share/clr-bundles/netkit-telnet
