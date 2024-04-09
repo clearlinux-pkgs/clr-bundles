@@ -6,10 +6,10 @@
 # autospec commit: f56f1fa
 #
 Name     : clr-bundles
-Version  : 41430
-Release  : 803
-URL      : https://github.com/clearlinux/clr-bundles/archive/41430/clr-bundles-41430.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/41430/clr-bundles-41430.tar.gz
+Version  : 41450
+Release  : 804
+URL      : https://github.com/clearlinux/clr-bundles/archive/41450/clr-bundles-41450.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/41450/clr-bundles-41450.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-41430
-cd %{_builddir}/clr-bundles-41430
+%setup -q -n clr-bundles-41450
+cd %{_builddir}/clr-bundles-41450
 pushd ..
-cp -a clr-bundles-41430 buildavx2
+cp -a clr-bundles-41450 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1712335079
+export SOURCE_DATE_EPOCH=1712638384
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1712335079
+export SOURCE_DATE_EPOCH=1712638384
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -1594,6 +1594,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/xss-lock
 /usr/share/clr-bundles/xterm
 /usr/share/clr-bundles/xz
+/usr/share/clr-bundles/xz-lzma-i-accept-the-risks
 /usr/share/clr-bundles/yakuake
 /usr/share/clr-bundles/yaml
 /usr/share/clr-bundles/yasm
