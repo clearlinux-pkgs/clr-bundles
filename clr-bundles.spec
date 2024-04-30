@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : clr-bundles
-Version  : 41610
-Release  : 811
-URL      : https://github.com/clearlinux/clr-bundles/archive/41610/clr-bundles-41610.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/41610/clr-bundles-41610.tar.gz
+Version  : 41630
+Release  : 812
+URL      : https://github.com/clearlinux/clr-bundles/archive/41630/clr-bundles-41630.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/41630/clr-bundles-41630.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-41610
-cd %{_builddir}/clr-bundles-41610
+%setup -q -n clr-bundles-41630
+cd %{_builddir}/clr-bundles-41630
 pushd ..
-cp -a clr-bundles-41610 buildavx2
+cp -a clr-bundles-41630 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1714138781
+export SOURCE_DATE_EPOCH=1714507225
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1714138781
+export SOURCE_DATE_EPOCH=1714507225
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -164,6 +164,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/bemenu
 /usr/share/clr-bundles/binutils
 /usr/share/clr-bundles/bison
+/usr/share/clr-bundles/blender
 /usr/share/clr-bundles/blivet-gui
 /usr/share/clr-bundles/bmap-tools
 /usr/share/clr-bundles/boinc-client
@@ -925,6 +926,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/evolution
 /usr/share/clr-bundles/extremetuxracer
 /usr/share/clr-bundles/faas-cli
+/usr/share/clr-bundles/fake-bundle-to-test-deletes
 /usr/share/clr-bundles/fdupes
 /usr/share/clr-bundles/feh
 /usr/share/clr-bundles/file
