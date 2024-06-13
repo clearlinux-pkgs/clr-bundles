@@ -6,10 +6,10 @@
 # autospec commit: fbcebd0
 #
 Name     : clr-bundles
-Version  : 41850
-Release  : 824
-URL      : https://github.com/clearlinux/clr-bundles/archive/41850/clr-bundles-41850.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/41850/clr-bundles-41850.tar.gz
+Version  : 41880
+Release  : 825
+URL      : https://github.com/clearlinux/clr-bundles/archive/41880/clr-bundles-41880.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/41880/clr-bundles-41880.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-41850
-cd %{_builddir}/clr-bundles-41850
+%setup -q -n clr-bundles-41880
+cd %{_builddir}/clr-bundles-41880
 pushd ..
-cp -a clr-bundles-41850 buildavx2
+cp -a clr-bundles-41880 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1717681633
+export SOURCE_DATE_EPOCH=1718297879
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1717681633
+export SOURCE_DATE_EPOCH=1718297879
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -1271,6 +1271,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/numactl
 /usr/share/clr-bundles/nut
 /usr/share/clr-bundles/nut-cgi
+/usr/share/clr-bundles/obs-studio
 /usr/share/clr-bundles/ocaml-basic
 /usr/share/clr-bundles/octave
 /usr/share/clr-bundles/okular
