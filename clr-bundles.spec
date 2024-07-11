@@ -6,10 +6,10 @@
 # autospec commit: b858a2a
 #
 Name     : clr-bundles
-Version  : 42000
-Release  : 835
-URL      : https://github.com/clearlinux/clr-bundles/archive/42000/clr-bundles-42000.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/42000/clr-bundles-42000.tar.gz
+Version  : 42020
+Release  : 836
+URL      : https://github.com/clearlinux/clr-bundles/archive/42020/clr-bundles-42020.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/42020/clr-bundles-42020.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-42000
-cd %{_builddir}/clr-bundles-42000
+%setup -q -n clr-bundles-42020
+cd %{_builddir}/clr-bundles-42020
 pushd ..
-cp -a clr-bundles-42000 buildavx2
+cp -a clr-bundles-42020 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1720543620
+export SOURCE_DATE_EPOCH=1720662404
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1720543620
+export SOURCE_DATE_EPOCH=1720662404
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -116,6 +116,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/NetworkManager
 /usr/share/clr-bundles/NetworkManager-extras
 /usr/share/clr-bundles/NetworkManager-tui
+/usr/share/clr-bundles/PyQt6
 /usr/share/clr-bundles/PyYAML
 /usr/share/clr-bundles/R-basic
 /usr/share/clr-bundles/R-datasets
@@ -715,6 +716,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/devpkg-oath-toolkit
 /usr/share/clr-bundles/devpkg-ocl-icd
 /usr/share/clr-bundles/devpkg-oiio
+/usr/share/clr-bundles/devpkg-oneVPL
 /usr/share/clr-bundles/devpkg-onig
 /usr/share/clr-bundles/devpkg-open-iscsi
 /usr/share/clr-bundles/devpkg-open-isns
