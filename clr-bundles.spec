@@ -6,10 +6,10 @@
 # autospec commit: b858a2a
 #
 Name     : clr-bundles
-Version  : 42030
-Release  : 837
-URL      : https://github.com/clearlinux/clr-bundles/archive/42030/clr-bundles-42030.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/42030/clr-bundles-42030.tar.gz
+Version  : 42050
+Release  : 838
+URL      : https://github.com/clearlinux/clr-bundles/archive/42050/clr-bundles-42050.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/42050/clr-bundles-42050.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-42030
-cd %{_builddir}/clr-bundles-42030
+%setup -q -n clr-bundles-42050
+cd %{_builddir}/clr-bundles-42050
 pushd ..
-cp -a clr-bundles-42030 buildavx2
+cp -a clr-bundles-42050 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1720824361
+export SOURCE_DATE_EPOCH=1721181006
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1720824361
+export SOURCE_DATE_EPOCH=1721181006
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -1425,11 +1425,13 @@ GOAMD64=v2
 /usr/share/clr-bundles/sddm
 /usr/share/clr-bundles/seahorse
 /usr/share/clr-bundles/seer
+/usr/share/clr-bundles/sg3_utils
 /usr/share/clr-bundles/shells
 /usr/share/clr-bundles/simplescreenrecorder
 /usr/share/clr-bundles/smartcard
 /usr/share/clr-bundles/smartmontools
 /usr/share/clr-bundles/smemstat
+/usr/share/clr-bundles/snapshot
 /usr/share/clr-bundles/socat
 /usr/share/clr-bundles/softflowd
 /usr/share/clr-bundles/software-testing
