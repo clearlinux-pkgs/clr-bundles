@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : clr-bundles
-Version  : 42170
-Release  : 846
-URL      : https://github.com/clearlinux/clr-bundles/archive/42170/clr-bundles-42170.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/42170/clr-bundles-42170.tar.gz
+Version  : 42200
+Release  : 847
+URL      : https://github.com/clearlinux/clr-bundles/archive/42200/clr-bundles-42200.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/42200/clr-bundles-42200.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-42170
-cd %{_builddir}/clr-bundles-42170
+%setup -q -n clr-bundles-42200
+cd %{_builddir}/clr-bundles-42200
 pushd ..
-cp -a clr-bundles-42170 buildavx2
+cp -a clr-bundles-42200 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1723762753
+export SOURCE_DATE_EPOCH=1724184480
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1723762753
+export SOURCE_DATE_EPOCH=1724184480
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -1157,6 +1157,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/libarchive
 /usr/share/clr-bundles/libdeps
 /usr/share/clr-bundles/libevent-lib
+/usr/share/clr-bundles/libgbinder
 /usr/share/clr-bundles/libglib
 /usr/share/clr-bundles/libgsf
 /usr/share/clr-bundles/libnl
@@ -1516,6 +1517,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/vlc
 /usr/share/clr-bundles/vnc-server
 /usr/share/clr-bundles/vte-lib
+/usr/share/clr-bundles/waydroid
 /usr/share/clr-bundles/wayland-server
 /usr/share/clr-bundles/waypipe
 /usr/share/clr-bundles/webkitgtk
