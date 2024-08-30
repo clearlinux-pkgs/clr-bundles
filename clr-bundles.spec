@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : clr-bundles
-Version  : 42240
-Release  : 850
-URL      : https://github.com/clearlinux/clr-bundles/archive/42240/clr-bundles-42240.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/42240/clr-bundles-42240.tar.gz
+Version  : 42280
+Release  : 851
+URL      : https://github.com/clearlinux/clr-bundles/archive/42280/clr-bundles-42280.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/42280/clr-bundles-42280.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-42240
-cd %{_builddir}/clr-bundles-42240
+%setup -q -n clr-bundles-42280
+cd %{_builddir}/clr-bundles-42280
 pushd ..
-cp -a clr-bundles-42240 buildavx2
+cp -a clr-bundles-42280 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1724789251
+export SOURCE_DATE_EPOCH=1724982343
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1724789251
+export SOURCE_DATE_EPOCH=1724982343
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -160,7 +160,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/axel
 /usr/share/clr-bundles/baobab
 /usr/share/clr-bundles/bc
-/usr/share/clr-bundles/bcache-tools
 /usr/share/clr-bundles/bcc
 /usr/share/clr-bundles/bcc-lib
 /usr/share/clr-bundles/bemenu
@@ -194,7 +193,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/capstone
 /usr/share/clr-bundles/casync
 /usr/share/clr-bundles/ccache
-/usr/share/clr-bundles/cheese
 /usr/share/clr-bundles/clamav
 /usr/share/clr-bundles/cloc
 /usr/share/clr-bundles/cloud-api
@@ -461,7 +459,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/devpkg-inih
 /usr/share/clr-bundles/devpkg-intel-gmmlib
 /usr/share/clr-bundles/devpkg-intel-media-driver
-/usr/share/clr-bundles/devpkg-ipmctl
 /usr/share/clr-bundles/devpkg-ipp-crypto
 /usr/share/clr-bundles/devpkg-ipset
 /usr/share/clr-bundles/devpkg-iptables
@@ -1528,6 +1525,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/which
 /usr/share/clr-bundles/wine
 /usr/share/clr-bundles/wine-dev
+/usr/share/clr-bundles/winegui
 /usr/share/clr-bundles/wireshark
 /usr/share/clr-bundles/wpa_supplicant
 /usr/share/clr-bundles/wslu
@@ -1535,6 +1533,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/x11-tools
 /usr/share/clr-bundles/x11vnc
 /usr/share/clr-bundles/x86-simd-sort
+/usr/share/clr-bundles/xboxdrv
 /usr/share/clr-bundles/xdg-desktop-portal
 /usr/share/clr-bundles/xdg-desktop-portal-gnome
 /usr/share/clr-bundles/xfce4-desktop
