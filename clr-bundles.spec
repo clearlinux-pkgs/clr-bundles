@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : clr-bundles
-Version  : 42590
-Release  : 865
-URL      : https://github.com/clearlinux/clr-bundles/archive/42590/clr-bundles-42590.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/42590/clr-bundles-42590.tar.gz
+Version  : 42630
+Release  : 866
+URL      : https://github.com/clearlinux/clr-bundles/archive/42630/clr-bundles-42630.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/42630/clr-bundles-42630.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-42590
-cd %{_builddir}/clr-bundles-42590
+%setup -q -n clr-bundles-42630
+cd %{_builddir}/clr-bundles-42630
 pushd ..
-cp -a clr-bundles-42590 buildavx2
+cp -a clr-bundles-42630 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1730785555
+export SOURCE_DATE_EPOCH=1731520074
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1730785555
+export SOURCE_DATE_EPOCH=1731520074
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
