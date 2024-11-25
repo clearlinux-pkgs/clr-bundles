@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : clr-bundles
-Version  : 42680
-Release  : 868
-URL      : https://github.com/clearlinux/clr-bundles/archive/42680/clr-bundles-42680.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/42680/clr-bundles-42680.tar.gz
+Version  : 42710
+Release  : 869
+URL      : https://github.com/clearlinux/clr-bundles/archive/42710/clr-bundles-42710.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/42710/clr-bundles-42710.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-42680
-cd %{_builddir}/clr-bundles-42680
+%setup -q -n clr-bundles-42710
+cd %{_builddir}/clr-bundles-42710
 pushd ..
-cp -a clr-bundles-42680 buildavx2
+cp -a clr-bundles-42710 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1732061000
+export SOURCE_DATE_EPOCH=1732578640
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1732061000
+export SOURCE_DATE_EPOCH=1732578640
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -318,7 +318,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/devpkg-capstone
 /usr/share/clr-bundles/devpkg-cfitsio
 /usr/share/clr-bundles/devpkg-check
-/usr/share/clr-bundles/devpkg-cheese
 /usr/share/clr-bundles/devpkg-clutter
 /usr/share/clr-bundles/devpkg-clutter-gst
 /usr/share/clr-bundles/devpkg-clutter-gtk
@@ -965,7 +964,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/gdk-pixbuf
 /usr/share/clr-bundles/geany
 /usr/share/clr-bundles/geary
-/usr/share/clr-bundles/gedit
 /usr/share/clr-bundles/geeqie
 /usr/share/clr-bundles/gegl
 /usr/share/clr-bundles/gh
@@ -1102,15 +1100,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/kernel-kvm
 /usr/share/clr-bundles/kernel-lts
 /usr/share/clr-bundles/kernel-lts-dkms
-/usr/share/clr-bundles/kernel-lts2017
-/usr/share/clr-bundles/kernel-lts2018
-/usr/share/clr-bundles/kernel-lts2018-dkms
-/usr/share/clr-bundles/kernel-lts2019
-/usr/share/clr-bundles/kernel-lts2019-dkms
-/usr/share/clr-bundles/kernel-lts2020
-/usr/share/clr-bundles/kernel-lts2020-dkms
-/usr/share/clr-bundles/kernel-lts2021
-/usr/share/clr-bundles/kernel-lts2021-dkms
 /usr/share/clr-bundles/kernel-ltscurrent
 /usr/share/clr-bundles/kernel-ltscurrent-dkms
 /usr/share/clr-bundles/kernel-ltsprev
@@ -1189,11 +1178,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/linux-firmware-qat
 /usr/share/clr-bundles/linux-firmware-wifi
 /usr/share/clr-bundles/linux-lts-dev
-/usr/share/clr-bundles/linux-lts2017-dev
-/usr/share/clr-bundles/linux-lts2018-dev
-/usr/share/clr-bundles/linux-lts2019-dev
-/usr/share/clr-bundles/linux-lts2020-dev
-/usr/share/clr-bundles/linux-lts2021-dev
 /usr/share/clr-bundles/linux-ltscurrent-dev
 /usr/share/clr-bundles/linux-ltsprev-dev
 /usr/share/clr-bundles/linux-tools
@@ -1414,7 +1398,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/rabbitmq-server
 /usr/share/clr-bundles/rclone
 /usr/share/clr-bundles/rebootmgr
-/usr/share/clr-bundles/redis-native
 /usr/share/clr-bundles/restic
 /usr/share/clr-bundles/rhythmbox
 /usr/share/clr-bundles/ripgrep
@@ -1550,6 +1533,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/xorriso
 /usr/share/clr-bundles/xpra
 /usr/share/clr-bundles/xrdp
+/usr/share/clr-bundles/xscorch
 /usr/share/clr-bundles/xscreensaver
 /usr/share/clr-bundles/xscreensaver-extras
 /usr/share/clr-bundles/xss-lock
