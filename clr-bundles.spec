@@ -6,10 +6,10 @@
 # autospec commit: fbbd4e3
 #
 Name     : clr-bundles
-Version  : 43070
-Release  : 881
-URL      : https://github.com/clearlinux/clr-bundles/archive/43070/clr-bundles-43070.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/43070/clr-bundles-43070.tar.gz
+Version  : 43080
+Release  : 882
+URL      : https://github.com/clearlinux/clr-bundles/archive/43080/clr-bundles-43080.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/43080/clr-bundles-43080.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-43070
-cd %{_builddir}/clr-bundles-43070
+%setup -q -n clr-bundles-43080
+cd %{_builddir}/clr-bundles-43080
 pushd ..
-cp -a clr-bundles-43070 buildavx2
+cp -a clr-bundles-43080 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740701412
+export SOURCE_DATE_EPOCH=1741154387
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1740701412
+export SOURCE_DATE_EPOCH=1741154387
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -1269,6 +1269,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/npb
 /usr/share/clr-bundles/ntopng
 /usr/share/clr-bundles/numactl
+/usr/share/clr-bundles/nushell
 /usr/share/clr-bundles/nut
 /usr/share/clr-bundles/nut-cgi
 /usr/share/clr-bundles/obs-studio
@@ -1400,6 +1401,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/rabbitmq-server
 /usr/share/clr-bundles/rclone
 /usr/share/clr-bundles/rebootmgr
+/usr/share/clr-bundles/redumper
 /usr/share/clr-bundles/restic
 /usr/share/clr-bundles/rhythmbox
 /usr/share/clr-bundles/ripgrep
