@@ -6,10 +6,10 @@
 # autospec commit: a88ffdc
 #
 Name     : clr-bundles
-Version  : 43250
-Release  : 892
-URL      : https://github.com/clearlinux/clr-bundles/archive/43250/clr-bundles-43250.tar.gz
-Source0  : https://github.com/clearlinux/clr-bundles/archive/43250/clr-bundles-43250.tar.gz
+Version  : 43270
+Release  : 893
+URL      : https://github.com/clearlinux/clr-bundles/archive/43270/clr-bundles-43270.tar.gz
+Source0  : https://github.com/clearlinux/clr-bundles/archive/43270/clr-bundles-43270.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-bundles-43250
-cd %{_builddir}/clr-bundles-43250
+%setup -q -n clr-bundles-43270
+cd %{_builddir}/clr-bundles-43270
 pushd ..
-cp -a clr-bundles-43250 buildavx2
+cp -a clr-bundles-43270 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1744303575
+export SOURCE_DATE_EPOCH=1744736099
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1744303575
+export SOURCE_DATE_EPOCH=1744736099
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -1401,6 +1401,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/quassel
 /usr/share/clr-bundles/quasselcore
 /usr/share/clr-bundles/rabbitmq-server
+/usr/share/clr-bundles/rasdaemon
 /usr/share/clr-bundles/rclone
 /usr/share/clr-bundles/rebootmgr
 /usr/share/clr-bundles/redumper
@@ -1438,7 +1439,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/socat
 /usr/share/clr-bundles/softflowd
 /usr/share/clr-bundles/software-testing
-/usr/share/clr-bundles/sox
 /usr/share/clr-bundles/spectacle
 /usr/share/clr-bundles/spice-gtk
 /usr/share/clr-bundles/spice-vdagent
