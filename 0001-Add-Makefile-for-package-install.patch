@@ -1,0 +1,44 @@
+From 54f6162b90428ecb55a3d62e1cd509d5c8dc0d19 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Tue, 20 May 2025 14:09:52 -0700
+Subject: [PATCH] Add Makefile for package install
+
+Signed-off-by: William Douglas <william.douglas@intel.com>
+---
+ Makefile | 15 +++++++++++++++
+ init     |  1 -
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+ create mode 100644 Makefile
+ delete mode 100644 init
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 00000000..a90da5f4
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,15 @@
++all: bundles
++
++bundles:
++	echo "Nothing to build"
++
++
++install:
++	mkdir -p $(DESTDIR)/usr/share/clr-bundles
++	cp -a bundles/* $(DESTDIR)/usr/share/clr-bundles/
++
++
++tag:
++	git push
++	git tag -f latest
++	git push -f --tags
+diff --git a/init b/init
+deleted file mode 100644
+index d00491fd..00000000
+--- a/init
++++ /dev/null
+@@ -1 +0,0 @@
+-1
+-- 
+2.49.0
+
