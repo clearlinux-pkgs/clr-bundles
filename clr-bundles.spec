@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : clr-bundles
-Version  : 43620
-Release  : 914
-URL      : https://github.com/clearlinux/clr-pundles/archive/43620/clr-pundles-43620.tar.gz
-Source0  : https://github.com/clearlinux/clr-pundles/archive/43620/clr-pundles-43620.tar.gz
+Version  : 43630
+Release  : 915
+URL      : https://github.com/clearlinux/clr-pundles/archive/43630/clr-pundles-43630.tar.gz
+Source0  : https://github.com/clearlinux/clr-pundles/archive/43630/clr-pundles-43630.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-pundles-43620
-cd %{_builddir}/clr-pundles-43620
+%setup -q -n clr-pundles-43630
+cd %{_builddir}/clr-pundles-43630
 pushd ..
-cp -a clr-pundles-43620 buildavx2
+cp -a clr-pundles-43630 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1749693227
+export SOURCE_DATE_EPOCH=1749746530
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,7 +84,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1749693227
+export SOURCE_DATE_EPOCH=1749746530
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -7593,7 +7593,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/jq-dev
 /usr/share/clr-bundles/jq-doc
 /usr/share/clr-bundles/jq-lib
-/usr/share/clr-bundles/jq-license
 /usr/share/clr-bundles/jq-man
 /usr/share/clr-bundles/js8call
 /usr/share/clr-bundles/js8call-bin
@@ -11953,9 +11952,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/multipath-tools-license
 /usr/share/clr-bundles/multipath-tools-man
 /usr/share/clr-bundles/multipath-tools-services
-/usr/share/clr-bundles/multiprocess
-/usr/share/clr-bundles/multiprocess-python
-/usr/share/clr-bundles/multiprocess-python3
 /usr/share/clr-bundles/mumble
 /usr/share/clr-bundles/mumble-bin
 /usr/share/clr-bundles/mumble-data
@@ -17834,6 +17830,11 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-dask-license
 /usr/share/clr-bundles/pypi-dask-python
 /usr/share/clr-bundles/pypi-dask-python3
+/usr/share/clr-bundles/pypi-datasets
+/usr/share/clr-bundles/pypi-datasets-bin
+/usr/share/clr-bundles/pypi-datasets-license
+/usr/share/clr-bundles/pypi-datasets-python
+/usr/share/clr-bundles/pypi-datasets-python3
 /usr/share/clr-bundles/pypi-dateparser
 /usr/share/clr-bundles/pypi-dateparser-bin
 /usr/share/clr-bundles/pypi-dateparser-license
@@ -19219,6 +19220,9 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-multipledispatch
 /usr/share/clr-bundles/pypi-multipledispatch-python
 /usr/share/clr-bundles/pypi-multipledispatch-python3
+/usr/share/clr-bundles/pypi-multiprocess
+/usr/share/clr-bundles/pypi-multiprocess-python
+/usr/share/clr-bundles/pypi-multiprocess-python3
 /usr/share/clr-bundles/pypi-munch
 /usr/share/clr-bundles/pypi-munch-license
 /usr/share/clr-bundles/pypi-munch-python
@@ -19825,6 +19829,9 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-pyaml-license
 /usr/share/clr-bundles/pypi-pyaml-python
 /usr/share/clr-bundles/pypi-pyaml-python3
+/usr/share/clr-bundles/pypi-pyarrow
+/usr/share/clr-bundles/pypi-pyarrow-python
+/usr/share/clr-bundles/pypi-pyarrow-python3
 /usr/share/clr-bundles/pypi-pyasn1
 /usr/share/clr-bundles/pypi-pyasn1-license
 /usr/share/clr-bundles/pypi-pyasn1-python
@@ -21072,6 +21079,11 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-trio_websocket-license
 /usr/share/clr-bundles/pypi-trio_websocket-python
 /usr/share/clr-bundles/pypi-trio_websocket-python3
+/usr/share/clr-bundles/pypi-trl
+/usr/share/clr-bundles/pypi-trl-bin
+/usr/share/clr-bundles/pypi-trl-license
+/usr/share/clr-bundles/pypi-trl-python
+/usr/share/clr-bundles/pypi-trl-python3
 /usr/share/clr-bundles/pypi-trove_classifiers
 /usr/share/clr-bundles/pypi-trove_classifiers-bin
 /usr/share/clr-bundles/pypi-trove_classifiers-license
@@ -21496,6 +21508,10 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-xvfbwrapper-license
 /usr/share/clr-bundles/pypi-xvfbwrapper-python
 /usr/share/clr-bundles/pypi-xvfbwrapper-python3
+/usr/share/clr-bundles/pypi-xxhash
+/usr/share/clr-bundles/pypi-xxhash-license
+/usr/share/clr-bundles/pypi-xxhash-python
+/usr/share/clr-bundles/pypi-xxhash-python3
 /usr/share/clr-bundles/pypi-xyzservices
 /usr/share/clr-bundles/pypi-xyzservices-data
 /usr/share/clr-bundles/pypi-xyzservices-license
