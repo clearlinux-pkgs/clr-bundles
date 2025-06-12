@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : clr-bundles
-Version  : 43580
-Release  : 913
-URL      : https://github.com/clearlinux/clr-pundles/archive/43580/clr-pundles-43580.tar.gz
-Source0  : https://github.com/clearlinux/clr-pundles/archive/43580/clr-pundles-43580.tar.gz
+Version  : 43620
+Release  : 914
+URL      : https://github.com/clearlinux/clr-pundles/archive/43620/clr-pundles-43620.tar.gz
+Source0  : https://github.com/clearlinux/clr-pundles/archive/43620/clr-pundles-43620.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-pundles-43580
-cd %{_builddir}/clr-pundles-43580
+%setup -q -n clr-pundles-43620
+cd %{_builddir}/clr-pundles-43620
 pushd ..
-cp -a clr-pundles-43580 buildavx2
+cp -a clr-pundles-43620 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1749511007
+export SOURCE_DATE_EPOCH=1749693227
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,7 +84,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1749511007
+export SOURCE_DATE_EPOCH=1749693227
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -336,7 +336,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/NetworkManager-libexec
 /usr/share/clr-bundles/NetworkManager-license
 /usr/share/clr-bundles/NetworkManager-locales
-/usr/share/clr-bundles/NetworkManager-man
 /usr/share/clr-bundles/NetworkManager-openconnect
 /usr/share/clr-bundles/NetworkManager-openconnect-data
 /usr/share/clr-bundles/NetworkManager-openconnect-lib
@@ -2660,7 +2659,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/audit-data
 /usr/share/clr-bundles/audit-dev
 /usr/share/clr-bundles/audit-lib
-/usr/share/clr-bundles/audit-libexec
 /usr/share/clr-bundles/audit-license
 /usr/share/clr-bundles/audit-man
 /usr/share/clr-bundles/audit-services
@@ -4318,7 +4316,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/devpkg-gnome-video-effects
 /usr/share/clr-bundles/devpkg-gnu-efi
 /usr/share/clr-bundles/devpkg-gnutls
-/usr/share/clr-bundles/devpkg-gobject-introspection
 /usr/share/clr-bundles/devpkg-googletest
 /usr/share/clr-bundles/devpkg-gperftools
 /usr/share/clr-bundles/devpkg-gpgme
@@ -4755,7 +4752,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/devpkg-wavpack
 /usr/share/clr-bundles/devpkg-wayland
 /usr/share/clr-bundles/devpkg-wayland-protocols
-/usr/share/clr-bundles/devpkg-webkitgtk
 /usr/share/clr-bundles/devpkg-weston
 /usr/share/clr-bundles/devpkg-wlroots
 /usr/share/clr-bundles/devpkg-woff2
@@ -4763,7 +4759,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/devpkg-xapian-core
 /usr/share/clr-bundles/devpkg-xcb-proto
 /usr/share/clr-bundles/devpkg-xcb-util-cursor
-/usr/share/clr-bundles/devpkg-xdg-desktop-portal
 /usr/share/clr-bundles/devpkg-xf86-input-evdev
 /usr/share/clr-bundles/devpkg-xf86-input-synaptics
 /usr/share/clr-bundles/devpkg-xf86-input-wacom
@@ -4774,7 +4769,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/devpkg-xmlsec1
 /usr/share/clr-bundles/devpkg-xorg-server
 /usr/share/clr-bundles/devpkg-xorgproto
-/usr/share/clr-bundles/devpkg-xrdp
 /usr/share/clr-bundles/devpkg-xtrans
 /usr/share/clr-bundles/devpkg-xwayland
 /usr/share/clr-bundles/devpkg-xz
@@ -6211,7 +6205,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-backgrounds
 /usr/share/clr-bundles/gnome-backgrounds-data
 /usr/share/clr-bundles/gnome-backgrounds-license
-/usr/share/clr-bundles/gnome-base-libs
 /usr/share/clr-bundles/gnome-bluetooth
 /usr/share/clr-bundles/gnome-bluetooth-bin
 /usr/share/clr-bundles/gnome-bluetooth-data
@@ -9651,7 +9644,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/libgit2-glib-python3
 /usr/share/clr-bundles/libgit2-lib
 /usr/share/clr-bundles/libgit2-license
-/usr/share/clr-bundles/libglib
 /usr/share/clr-bundles/libglibutil
 /usr/share/clr-bundles/libglibutil-dev
 /usr/share/clr-bundles/libglibutil-lib
@@ -11193,6 +11185,11 @@ GOAMD64=v2
 /usr/share/clr-bundles/lksctp-tools-lib
 /usr/share/clr-bundles/lksctp-tools-license
 /usr/share/clr-bundles/lksctp-tools-man
+/usr/share/clr-bundles/llama.cpp
+/usr/share/clr-bundles/llama.cpp-bin
+/usr/share/clr-bundles/llama.cpp-dev
+/usr/share/clr-bundles/llama.cpp-lib
+/usr/share/clr-bundles/llama.cpp-license
 /usr/share/clr-bundles/lldb
 /usr/share/clr-bundles/lldpd
 /usr/share/clr-bundles/lldpd-autostart
@@ -12873,8 +12870,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/pagemon-data
 /usr/share/clr-bundles/pagemon-license
 /usr/share/clr-bundles/pagemon-man
-/usr/share/clr-bundles/paho-mqtt-c-lib
-/usr/share/clr-bundles/paho-mqtt-cpp-lib
 /usr/share/clr-bundles/paho.mqtt.c
 /usr/share/clr-bundles/paho.mqtt.c-bin
 /usr/share/clr-bundles/paho.mqtt.c-dev
@@ -13841,6 +13836,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/perl-Devel-Cover
 /usr/share/clr-bundles/perl-Devel-Cover-bin
 /usr/share/clr-bundles/perl-Devel-Cover-dev
+/usr/share/clr-bundles/perl-Devel-Cover-license
 /usr/share/clr-bundles/perl-Devel-Cover-man
 /usr/share/clr-bundles/perl-Devel-Cover-perl
 /usr/share/clr-bundles/perl-Devel-Cycle
@@ -18411,6 +18407,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-grpcio_reflection-python
 /usr/share/clr-bundles/pypi-grpcio_reflection-python3
 /usr/share/clr-bundles/pypi-grpcio_tools
+/usr/share/clr-bundles/pypi-grpcio_tools-bin
 /usr/share/clr-bundles/pypi-grpcio_tools-license
 /usr/share/clr-bundles/pypi-grpcio_tools-python
 /usr/share/clr-bundles/pypi-grpcio_tools-python3
@@ -19151,6 +19148,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-mkdocs_material_extensions-python
 /usr/share/clr-bundles/pypi-mkdocs_material_extensions-python3
 /usr/share/clr-bundles/pypi-mkdocs_monorepo_plugin
+/usr/share/clr-bundles/pypi-mkdocs_monorepo_plugin-license
 /usr/share/clr-bundles/pypi-mkdocs_monorepo_plugin-python
 /usr/share/clr-bundles/pypi-mkdocs_monorepo_plugin-python3
 /usr/share/clr-bundles/pypi-mkdocstrings
@@ -23677,6 +23675,10 @@ GOAMD64=v2
 /usr/share/clr-bundles/unixODBC-lib
 /usr/share/clr-bundles/unixODBC-license
 /usr/share/clr-bundles/unixODBC-man
+/usr/share/clr-bundles/unsloth
+/usr/share/clr-bundles/unsloth-license
+/usr/share/clr-bundles/unsloth-python
+/usr/share/clr-bundles/unsloth-python3
 /usr/share/clr-bundles/unzip
 /usr/share/clr-bundles/unzip-abi
 /usr/share/clr-bundles/unzip-bin
@@ -23830,6 +23832,10 @@ GOAMD64=v2
 /usr/share/clr-bundles/vectorscan-doc
 /usr/share/clr-bundles/vectorscan-lib
 /usr/share/clr-bundles/vectorscan-license
+/usr/share/clr-bundles/verilator
+/usr/share/clr-bundles/verilator-bin
+/usr/share/clr-bundles/verilator-dev
+/usr/share/clr-bundles/verilator-license
 /usr/share/clr-bundles/vid.stab
 /usr/share/clr-bundles/vid.stab-dev
 /usr/share/clr-bundles/vid.stab-lib
@@ -23888,7 +23894,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/vkd3d-lib
 /usr/share/clr-bundles/vkd3d-lib32
 /usr/share/clr-bundles/vkd3d-license
-/usr/share/clr-bundles/vlc
 /usr/share/clr-bundles/vnc-server
 /usr/share/clr-bundles/volk
 /usr/share/clr-bundles/volk-bin
@@ -24547,6 +24552,11 @@ GOAMD64=v2
 /usr/share/clr-bundles/xprop-bin
 /usr/share/clr-bundles/xprop-license
 /usr/share/clr-bundles/xprop-man
+/usr/share/clr-bundles/xpumanager
+/usr/share/clr-bundles/xpumanager-bin
+/usr/share/clr-bundles/xpumanager-dev
+/usr/share/clr-bundles/xpumanager-lib
+/usr/share/clr-bundles/xpumanager-license
 /usr/share/clr-bundles/xrandr
 /usr/share/clr-bundles/xrandr-bin
 /usr/share/clr-bundles/xrandr-license
@@ -24703,6 +24713,11 @@ GOAMD64=v2
 /usr/share/clr-bundles/yelp-xsl-data
 /usr/share/clr-bundles/yelp-xsl-dev
 /usr/share/clr-bundles/yelp-xsl-license
+/usr/share/clr-bundles/yosys
+/usr/share/clr-bundles/yosys-bin
+/usr/share/clr-bundles/yosys-data
+/usr/share/clr-bundles/yosys-dev
+/usr/share/clr-bundles/yosys-license
 /usr/share/clr-bundles/yq
 /usr/share/clr-bundles/yq-bin
 /usr/share/clr-bundles/yq-license
