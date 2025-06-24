@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : clr-bundles
-Version  : 43630
-Release  : 915
-URL      : https://github.com/clearlinux/clr-pundles/archive/43630/clr-pundles-43630.tar.gz
-Source0  : https://github.com/clearlinux/clr-pundles/archive/43630/clr-pundles-43630.tar.gz
+Version  : 43650
+Release  : 916
+URL      : https://github.com/clearlinux/clr-pundles/archive/43650/clr-pundles-43650.tar.gz
+Source0  : https://github.com/clearlinux/clr-pundles/archive/43650/clr-pundles-43650.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-pundles-43630
-cd %{_builddir}/clr-pundles-43630
+%setup -q -n clr-pundles-43650
+cd %{_builddir}/clr-pundles-43650
 pushd ..
-cp -a clr-pundles-43630 buildavx2
+cp -a clr-pundles-43650 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1749746530
+export SOURCE_DATE_EPOCH=1750773249
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,7 +84,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1749746530
+export SOURCE_DATE_EPOCH=1750773249
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -100,7 +100,6 @@ GOAMD64=v2
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/clr-bundles/AOSP-dev
 /usr/share/clr-bundles/AVB-AudioModules
 /usr/share/clr-bundles/AVB-AudioModules-data
 /usr/share/clr-bundles/AVB-AudioModules-dev
@@ -180,6 +179,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/FreeCAD-python
 /usr/share/clr-bundles/FreeCAD-python3
 /usr/share/clr-bundles/FreeRDP
+/usr/share/clr-bundles/FreeRDP-basic
 /usr/share/clr-bundles/FreeRDP-bin
 /usr/share/clr-bundles/FreeRDP-data
 /usr/share/clr-bundles/FreeRDP-dev
@@ -320,12 +320,14 @@ GOAMD64=v2
 /usr/share/clr-bundles/MuseScore-man
 /usr/share/clr-bundles/NetworkManager
 /usr/share/clr-bundles/NetworkManager-autostart
+/usr/share/clr-bundles/NetworkManager-basic
 /usr/share/clr-bundles/NetworkManager-bin
 /usr/share/clr-bundles/NetworkManager-config
 /usr/share/clr-bundles/NetworkManager-data
 /usr/share/clr-bundles/NetworkManager-dev
 /usr/share/clr-bundles/NetworkManager-doc
 /usr/share/clr-bundles/NetworkManager-extras
+/usr/share/clr-bundles/NetworkManager-extras-basic
 /usr/share/clr-bundles/NetworkManager-l2tp
 /usr/share/clr-bundles/NetworkManager-l2tp-data
 /usr/share/clr-bundles/NetworkManager-l2tp-lib
@@ -2080,6 +2082,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/RawTherapee-license
 /usr/share/clr-bundles/RawTherapee-man
 /usr/share/clr-bundles/Remmina
+/usr/share/clr-bundles/Remmina-basic
 /usr/share/clr-bundles/Remmina-bin
 /usr/share/clr-bundles/Remmina-data
 /usr/share/clr-bundles/Remmina-dev
@@ -2327,6 +2330,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/adwaita-icon-theme-dev
 /usr/share/clr-bundles/adwaita-icon-theme-license
 /usr/share/clr-bundles/akonadi
+/usr/share/clr-bundles/akonadi-basic
 /usr/share/clr-bundles/akonadi-bin
 /usr/share/clr-bundles/akonadi-calendar
 /usr/share/clr-bundles/akonadi-calendar-bin
@@ -2445,6 +2449,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/analitza-lib
 /usr/share/clr-bundles/analitza-license
 /usr/share/clr-bundles/ansible
+/usr/share/clr-bundles/ansible-basic
 /usr/share/clr-bundles/ansible-bin
 /usr/share/clr-bundles/ansible-core
 /usr/share/clr-bundles/ansible-core-bin
@@ -2631,6 +2636,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/attr-staticdev
 /usr/share/clr-bundles/attr-staticdev32
 /usr/share/clr-bundles/audacious
+/usr/share/clr-bundles/audacious-basic
 /usr/share/clr-bundles/audacious-bin
 /usr/share/clr-bundles/audacious-data
 /usr/share/clr-bundles/audacious-dev
@@ -2866,6 +2872,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/bind-utils-license
 /usr/share/clr-bundles/bind-utils-man
 /usr/share/clr-bundles/binutils
+/usr/share/clr-bundles/binutils-basic
 /usr/share/clr-bundles/binutils-bin
 /usr/share/clr-bundles/binutils-dev
 /usr/share/clr-bundles/binutils-doc
@@ -2904,6 +2911,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/blinken-license
 /usr/share/clr-bundles/blinken-locales
 /usr/share/clr-bundles/blivet-gui
+/usr/share/clr-bundles/blivet-gui-basic
 /usr/share/clr-bundles/blivet-gui-bin
 /usr/share/clr-bundles/blivet-gui-data
 /usr/share/clr-bundles/blivet-gui-license
@@ -3013,7 +3021,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/bpftool
 /usr/share/clr-bundles/bpftool-bin
 /usr/share/clr-bundles/bpftool-license
-/usr/share/clr-bundles/bpftrace
 /usr/share/clr-bundles/breeze
 /usr/share/clr-bundles/breeze-bin
 /usr/share/clr-bundles/breeze-data
@@ -3049,6 +3056,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/bsdiff-staticdev
 /usr/share/clr-bundles/bspwm
 /usr/share/clr-bundles/bspwm-abi
+/usr/share/clr-bundles/bspwm-basic
 /usr/share/clr-bundles/bspwm-bin
 /usr/share/clr-bundles/bspwm-data
 /usr/share/clr-bundles/bspwm-doc
@@ -3090,12 +3098,12 @@ GOAMD64=v2
 /usr/share/clr-bundles/buildreq-qt6
 /usr/share/clr-bundles/buildreq-scons
 /usr/share/clr-bundles/buildreq-scons-abi
-/usr/share/clr-bundles/buildreq-spark
 /usr/share/clr-bundles/buildx
 /usr/share/clr-bundles/bwidget
 /usr/share/clr-bundles/bwidget-abi
 /usr/share/clr-bundles/bwidget-license
 /usr/share/clr-bundles/byobu
+/usr/share/clr-bundles/byobu-basic
 /usr/share/clr-bundles/byobu-bin
 /usr/share/clr-bundles/byobu-data
 /usr/share/clr-bundles/byobu-doc
@@ -3299,6 +3307,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/cifs-utils-man
 /usr/share/clr-bundles/clamav
 /usr/share/clr-bundles/clamav-autostart
+/usr/share/clr-bundles/clamav-basic
 /usr/share/clr-bundles/clamav-bin
 /usr/share/clr-bundles/clamav-config
 /usr/share/clr-bundles/clamav-data
@@ -3393,6 +3402,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/clr-init
 /usr/share/clr-bundles/clr-init-license
 /usr/share/clr-bundles/clr-installer
+/usr/share/clr-bundles/clr-installer-basic
 /usr/share/clr-bundles/clr-installer-bin
 /usr/share/clr-bundles/clr-installer-data
 /usr/share/clr-bundles/clr-installer-dev
@@ -3512,6 +3522,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/cni-plugins-libexec
 /usr/share/clr-bundles/cni-plugins-license
 /usr/share/clr-bundles/cockpit
+/usr/share/clr-bundles/cockpit-basic
 /usr/share/clr-bundles/cockpit-bin
 /usr/share/clr-bundles/cockpit-config
 /usr/share/clr-bundles/cockpit-data
@@ -3540,6 +3551,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/coinmp-lib
 /usr/share/clr-bundles/coinmp-license
 /usr/share/clr-bundles/collectd
+/usr/share/clr-bundles/collectd-basic
 /usr/share/clr-bundles/collectd-bin
 /usr/share/clr-bundles/collectd-data
 /usr/share/clr-bundles/collectd-dev
@@ -3620,7 +3632,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/compat-codec2-soname1
 /usr/share/clr-bundles/compat-codec2-soname1-lib
 /usr/share/clr-bundles/compat-codec2-soname1-license
-/usr/share/clr-bundles/compat-common
 /usr/share/clr-bundles/compat-enchant-soname1
 /usr/share/clr-bundles/compat-enchant-soname1-abi
 /usr/share/clr-bundles/compat-enchant-soname1-bin
@@ -3804,6 +3815,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/connect-proxy-license
 /usr/share/clr-bundles/connect-proxy-man
 /usr/share/clr-bundles/connections
+/usr/share/clr-bundles/connections-basic
 /usr/share/clr-bundles/connections-bin
 /usr/share/clr-bundles/connections-data
 /usr/share/clr-bundles/connections-doc
@@ -3965,6 +3977,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/cups-pk-helper-locales
 /usr/share/clr-bundles/cups-services
 /usr/share/clr-bundles/curl
+/usr/share/clr-bundles/curl-basic
 /usr/share/clr-bundles/curl-bin
 /usr/share/clr-bundles/curl-dev
 /usr/share/clr-bundles/curl-dev32
@@ -3998,6 +4011,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/dapl-license
 /usr/share/clr-bundles/dapl-man
 /usr/share/clr-bundles/darktable
+/usr/share/clr-bundles/darktable-basic
 /usr/share/clr-bundles/darktable-bin
 /usr/share/clr-bundles/darktable-data
 /usr/share/clr-bundles/darktable-doc
@@ -4817,6 +4831,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/diffutils-locales
 /usr/share/clr-bundles/diffutils-man
 /usr/share/clr-bundles/digikam
+/usr/share/clr-bundles/digikam-basic
 /usr/share/clr-bundles/digikam-bin
 /usr/share/clr-bundles/digikam-data
 /usr/share/clr-bundles/digikam-dev
@@ -4896,6 +4911,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/dmlc-core-lib
 /usr/share/clr-bundles/dmlc-core-license
 /usr/share/clr-bundles/dnf
+/usr/share/clr-bundles/dnf-basic
 /usr/share/clr-bundles/dnf-bin
 /usr/share/clr-bundles/dnf-config
 /usr/share/clr-bundles/dnf-license
@@ -4941,6 +4957,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/dockerpty-python3
 /usr/share/clr-bundles/docutils
 /usr/share/clr-bundles/dolphin
+/usr/share/clr-bundles/dolphin-basic
 /usr/share/clr-bundles/dolphin-bin
 /usr/share/clr-bundles/dolphin-data
 /usr/share/clr-bundles/dolphin-dev
@@ -4954,7 +4971,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/dolphin-plugins-license
 /usr/share/clr-bundles/dolphin-plugins-locales
 /usr/share/clr-bundles/dolphin-services
-/usr/share/clr-bundles/domotica
 /usr/share/clr-bundles/dos2unix
 /usr/share/clr-bundles/dos2unix-bin
 /usr/share/clr-bundles/dos2unix-doc
@@ -4976,6 +4992,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/double-conversion-lib
 /usr/share/clr-bundles/double-conversion-license
 /usr/share/clr-bundles/dovecot
+/usr/share/clr-bundles/dovecot-basic
 /usr/share/clr-bundles/dovecot-bin
 /usr/share/clr-bundles/dovecot-config
 /usr/share/clr-bundles/dovecot-data
@@ -4999,6 +5016,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/dpcpp-compiler-lib
 /usr/share/clr-bundles/dpcpp-compiler-license
 /usr/share/clr-bundles/dpdk
+/usr/share/clr-bundles/dpdk-basic
 /usr/share/clr-bundles/dpdk-bin
 /usr/share/clr-bundles/dpdk-data
 /usr/share/clr-bundles/dpdk-dev
@@ -5020,6 +5038,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/dracut-license
 /usr/share/clr-bundles/dracut-man
 /usr/share/clr-bundles/dragon
+/usr/share/clr-bundles/dragon-basic
 /usr/share/clr-bundles/dragon-bin
 /usr/share/clr-bundles/dragon-data
 /usr/share/clr-bundles/dragon-doc
@@ -5224,6 +5243,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/enchant-man
 /usr/share/clr-bundles/enterprise-login
 /usr/share/clr-bundles/eog
+/usr/share/clr-bundles/eog-basic
 /usr/share/clr-bundles/eog-bin
 /usr/share/clr-bundles/eog-data
 /usr/share/clr-bundles/eog-dev
@@ -5254,6 +5274,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/epsonscan2-lib
 /usr/share/clr-bundles/epsonscan2-license
 /usr/share/clr-bundles/ethtool
+/usr/share/clr-bundles/ethtool-basic
 /usr/share/clr-bundles/ethtool-bin
 /usr/share/clr-bundles/ethtool-data
 /usr/share/clr-bundles/ethtool-license
@@ -5264,12 +5285,14 @@ GOAMD64=v2
 /usr/share/clr-bundles/etr-doc
 /usr/share/clr-bundles/etr-license
 /usr/share/clr-bundles/eventviews
+/usr/share/clr-bundles/eventviews-basic
 /usr/share/clr-bundles/eventviews-data
 /usr/share/clr-bundles/eventviews-dev
 /usr/share/clr-bundles/eventviews-lib
 /usr/share/clr-bundles/eventviews-license
 /usr/share/clr-bundles/eventviews-locales
 /usr/share/clr-bundles/evince
+/usr/share/clr-bundles/evince-basic
 /usr/share/clr-bundles/evince-bin
 /usr/share/clr-bundles/evince-data
 /usr/share/clr-bundles/evince-dev
@@ -5281,6 +5304,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/evince-man
 /usr/share/clr-bundles/evince-services
 /usr/share/clr-bundles/evolution
+/usr/share/clr-bundles/evolution-basic
 /usr/share/clr-bundles/evolution-bin
 /usr/share/clr-bundles/evolution-data
 /usr/share/clr-bundles/evolution-data-server
@@ -5411,6 +5435,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/fdupes-bin
 /usr/share/clr-bundles/fdupes-man
 /usr/share/clr-bundles/feh
+/usr/share/clr-bundles/feh-basic
 /usr/share/clr-bundles/feh-bin
 /usr/share/clr-bundles/feh-data
 /usr/share/clr-bundles/feh-doc
@@ -5448,6 +5473,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/file-roller-license
 /usr/share/clr-bundles/file-roller-locales
 /usr/share/clr-bundles/filelight
+/usr/share/clr-bundles/filelight-basic
 /usr/share/clr-bundles/filelight-bin
 /usr/share/clr-bundles/filelight-data
 /usr/share/clr-bundles/filelight-doc
@@ -5462,13 +5488,16 @@ GOAMD64=v2
 /usr/share/clr-bundles/findutils-locales
 /usr/share/clr-bundles/findutils-man
 /usr/share/clr-bundles/fio
+/usr/share/clr-bundles/fio-basic
 /usr/share/clr-bundles/fio-bin
 /usr/share/clr-bundles/fio-data
 /usr/share/clr-bundles/fio-extras
 /usr/share/clr-bundles/fio-license
 /usr/share/clr-bundles/fio-man
 /usr/share/clr-bundles/firefox
+/usr/share/clr-bundles/firefox-basic
 /usr/share/clr-bundles/firewalld
+/usr/share/clr-bundles/firewalld-basic
 /usr/share/clr-bundles/firewalld-bin
 /usr/share/clr-bundles/firewalld-data
 /usr/share/clr-bundles/firewalld-license
@@ -5511,6 +5540,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/flatpack-kcm-locales
 /usr/share/clr-bundles/flatpak
 /usr/share/clr-bundles/flatpak-autostart
+/usr/share/clr-bundles/flatpak-basic
 /usr/share/clr-bundles/flatpak-bin
 /usr/share/clr-bundles/flatpak-builder
 /usr/share/clr-bundles/flatpak-builder-bin
@@ -5882,6 +5912,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gdm-locales
 /usr/share/clr-bundles/gdm-services
 /usr/share/clr-bundles/geany
+/usr/share/clr-bundles/geany-basic
 /usr/share/clr-bundles/geany-bin
 /usr/share/clr-bundles/geany-data
 /usr/share/clr-bundles/geany-dev
@@ -5898,6 +5929,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/geany-plugins-license
 /usr/share/clr-bundles/geany-plugins-locales
 /usr/share/clr-bundles/geary
+/usr/share/clr-bundles/geary-basic
 /usr/share/clr-bundles/geary-bin
 /usr/share/clr-bundles/geary-data
 /usr/share/clr-bundles/geary-doc
@@ -5980,6 +6012,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gh-license
 /usr/share/clr-bundles/gh-man
 /usr/share/clr-bundles/ghostscript
+/usr/share/clr-bundles/ghostscript-basic
 /usr/share/clr-bundles/ghostscript-bin
 /usr/share/clr-bundles/ghostscript-data
 /usr/share/clr-bundles/ghostscript-dev
@@ -6006,6 +6039,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gifsicle-license
 /usr/share/clr-bundles/gifsicle-man
 /usr/share/clr-bundles/gimp
+/usr/share/clr-bundles/gimp-basic
 /usr/share/clr-bundles/gimp-bin
 /usr/share/clr-bundles/gimp-data
 /usr/share/clr-bundles/gimp-dev
@@ -6022,6 +6056,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/girara-license
 /usr/share/clr-bundles/girara-locales
 /usr/share/clr-bundles/git
+/usr/share/clr-bundles/git-basic
 /usr/share/clr-bundles/git-bin
 /usr/share/clr-bundles/git-data
 /usr/share/clr-bundles/git-extras
@@ -6214,6 +6249,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-bluetooth-locales
 /usr/share/clr-bundles/gnome-bluetooth-man
 /usr/share/clr-bundles/gnome-boxes
+/usr/share/clr-bundles/gnome-boxes-basic
 /usr/share/clr-bundles/gnome-boxes-bin
 /usr/share/clr-bundles/gnome-boxes-data
 /usr/share/clr-bundles/gnome-boxes-dev
@@ -6223,6 +6259,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-boxes-license
 /usr/share/clr-bundles/gnome-boxes-locales
 /usr/share/clr-bundles/gnome-calculator
+/usr/share/clr-bundles/gnome-calculator-basic
 /usr/share/clr-bundles/gnome-calculator-bin
 /usr/share/clr-bundles/gnome-calculator-data
 /usr/share/clr-bundles/gnome-calculator-dev
@@ -6238,6 +6275,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-calendar-license
 /usr/share/clr-bundles/gnome-calendar-locales
 /usr/share/clr-bundles/gnome-characters
+/usr/share/clr-bundles/gnome-characters-basic
 /usr/share/clr-bundles/gnome-characters-bin
 /usr/share/clr-bundles/gnome-characters-data
 /usr/share/clr-bundles/gnome-characters-lib
@@ -6257,6 +6295,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-clocks-license
 /usr/share/clr-bundles/gnome-clocks-locales
 /usr/share/clr-bundles/gnome-color-manager
+/usr/share/clr-bundles/gnome-color-manager-basic
 /usr/share/clr-bundles/gnome-color-manager-bin
 /usr/share/clr-bundles/gnome-color-manager-data
 /usr/share/clr-bundles/gnome-color-manager-doc
@@ -6299,6 +6338,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-desktop-testing-man
 /usr/share/clr-bundles/gnome-desktop-tests
 /usr/share/clr-bundles/gnome-disk-utility
+/usr/share/clr-bundles/gnome-disk-utility-basic
 /usr/share/clr-bundles/gnome-disk-utility-bin
 /usr/share/clr-bundles/gnome-disk-utility-data
 /usr/share/clr-bundles/gnome-disk-utility-libexec
@@ -6306,6 +6346,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-disk-utility-locales
 /usr/share/clr-bundles/gnome-disk-utility-man
 /usr/share/clr-bundles/gnome-font-viewer
+/usr/share/clr-bundles/gnome-font-viewer-basic
 /usr/share/clr-bundles/gnome-font-viewer-bin
 /usr/share/clr-bundles/gnome-font-viewer-data
 /usr/share/clr-bundles/gnome-font-viewer-license
@@ -6331,6 +6372,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-keyring-man
 /usr/share/clr-bundles/gnome-keyring-services
 /usr/share/clr-bundles/gnome-logs
+/usr/share/clr-bundles/gnome-logs-basic
 /usr/share/clr-bundles/gnome-logs-bin
 /usr/share/clr-bundles/gnome-logs-data
 /usr/share/clr-bundles/gnome-logs-doc
@@ -6350,6 +6392,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-menus-license
 /usr/share/clr-bundles/gnome-menus-locales
 /usr/share/clr-bundles/gnome-music
+/usr/share/clr-bundles/gnome-music-basic
 /usr/share/clr-bundles/gnome-music-bin
 /usr/share/clr-bundles/gnome-music-data
 /usr/share/clr-bundles/gnome-music-doc
@@ -6376,6 +6419,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-panel-locales
 /usr/share/clr-bundles/gnome-panel-man
 /usr/share/clr-bundles/gnome-photos
+/usr/share/clr-bundles/gnome-photos-basic
 /usr/share/clr-bundles/gnome-photos-bin
 /usr/share/clr-bundles/gnome-photos-data
 /usr/share/clr-bundles/gnome-photos-doc
@@ -6400,6 +6444,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-screensaver-locales
 /usr/share/clr-bundles/gnome-screensaver-man
 /usr/share/clr-bundles/gnome-screenshot
+/usr/share/clr-bundles/gnome-screenshot-basic
 /usr/share/clr-bundles/gnome-screenshot-bin
 /usr/share/clr-bundles/gnome-screenshot-data
 /usr/share/clr-bundles/gnome-screenshot-license
@@ -6448,6 +6493,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-software-locales
 /usr/share/clr-bundles/gnome-software-man
 /usr/share/clr-bundles/gnome-system-monitor
+/usr/share/clr-bundles/gnome-system-monitor-basic
 /usr/share/clr-bundles/gnome-system-monitor-bin
 /usr/share/clr-bundles/gnome-system-monitor-data
 /usr/share/clr-bundles/gnome-system-monitor-doc
@@ -6464,6 +6510,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-terminal-man
 /usr/share/clr-bundles/gnome-terminal-services
 /usr/share/clr-bundles/gnome-text-editor
+/usr/share/clr-bundles/gnome-text-editor-basic
 /usr/share/clr-bundles/gnome-text-editor-bin
 /usr/share/clr-bundles/gnome-text-editor-data
 /usr/share/clr-bundles/gnome-text-editor-doc
@@ -6488,6 +6535,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnome-video-effects-dev
 /usr/share/clr-bundles/gnome-video-effects-license
 /usr/share/clr-bundles/gnome-weather
+/usr/share/clr-bundles/gnome-weather-basic
 /usr/share/clr-bundles/gnome-weather-bin
 /usr/share/clr-bundles/gnome-weather-data
 /usr/share/clr-bundles/gnome-weather-license
@@ -6503,6 +6551,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnuchess-locales
 /usr/share/clr-bundles/gnuchess-man
 /usr/share/clr-bundles/gnupg
+/usr/share/clr-bundles/gnupg-basic
 /usr/share/clr-bundles/gnupg-bin
 /usr/share/clr-bundles/gnupg-data
 /usr/share/clr-bundles/gnupg-doc
@@ -6512,6 +6561,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gnupg-locales
 /usr/share/clr-bundles/gnupg-man
 /usr/share/clr-bundles/gnuplot
+/usr/share/clr-bundles/gnuplot-basic
 /usr/share/clr-bundles/gnuplot-bin
 /usr/share/clr-bundles/gnuplot-data
 /usr/share/clr-bundles/gnuplot-libexec
@@ -6575,6 +6625,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/googletest-lib
 /usr/share/clr-bundles/googletest-license
 /usr/share/clr-bundles/gparted
+/usr/share/clr-bundles/gparted-basic
 /usr/share/clr-bundles/gparted-bin
 /usr/share/clr-bundles/gparted-data
 /usr/share/clr-bundles/gparted-libexec
@@ -6606,6 +6657,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gperftools-license
 /usr/share/clr-bundles/gperftools-man
 /usr/share/clr-bundles/gpgme
+/usr/share/clr-bundles/gpgme-basic
 /usr/share/clr-bundles/gpgme-bin
 /usr/share/clr-bundles/gpgme-data
 /usr/share/clr-bundles/gpgme-dev
@@ -6615,8 +6667,8 @@ GOAMD64=v2
 /usr/share/clr-bundles/gpgme-license
 /usr/share/clr-bundles/gpgme-python
 /usr/share/clr-bundles/gpgme-python3
-/usr/share/clr-bundles/gphoto
 /usr/share/clr-bundles/gphoto2
+/usr/share/clr-bundles/gphoto2-basic
 /usr/share/clr-bundles/gphoto2-bin
 /usr/share/clr-bundles/gphoto2-doc
 /usr/share/clr-bundles/gphoto2-license
@@ -6834,6 +6886,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/gst-python-python
 /usr/share/clr-bundles/gst-python-python3
 /usr/share/clr-bundles/gstreamer
+/usr/share/clr-bundles/gstreamer-basic
 /usr/share/clr-bundles/gstreamer-bin
 /usr/share/clr-bundles/gstreamer-data
 /usr/share/clr-bundles/gstreamer-dev
@@ -7000,6 +7053,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/hardinfo-locales
 /usr/share/clr-bundles/hardinfo-man
 /usr/share/clr-bundles/hardinfo2
+/usr/share/clr-bundles/hardinfo2-basic
 /usr/share/clr-bundles/hardinfo2-bin
 /usr/share/clr-bundles/hardinfo2-data
 /usr/share/clr-bundles/hardinfo2-lib
@@ -7049,6 +7103,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/help2man-license
 /usr/share/clr-bundles/help2man-man
 /usr/share/clr-bundles/hexchat
+/usr/share/clr-bundles/hexchat-basic
 /usr/share/clr-bundles/hexchat-bin
 /usr/share/clr-bundles/hexchat-data
 /usr/share/clr-bundles/hexchat-dev
@@ -7125,6 +7180,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/hunspell-license
 /usr/share/clr-bundles/hunspell-man
 /usr/share/clr-bundles/hwloc
+/usr/share/clr-bundles/hwloc-basic
 /usr/share/clr-bundles/hwloc-bin
 /usr/share/clr-bundles/hwloc-data
 /usr/share/clr-bundles/hwloc-dev
@@ -7312,6 +7368,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/inih-lib
 /usr/share/clr-bundles/inih-license
 /usr/share/clr-bundles/init-rdahead
+/usr/share/clr-bundles/init-rdahead-basic
 /usr/share/clr-bundles/init-rdahead-bin
 /usr/share/clr-bundles/init-rdahead-extras
 /usr/share/clr-bundles/init-rdahead-license
@@ -7433,6 +7490,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/ipp-usb-man
 /usr/share/clr-bundles/ipp-usb-services
 /usr/share/clr-bundles/iproute2
+/usr/share/clr-bundles/iproute2-basic
 /usr/share/clr-bundles/iproute2-bin
 /usr/share/clr-bundles/iproute2-data
 /usr/share/clr-bundles/iproute2-dev
@@ -7448,6 +7506,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/ipset-man
 /usr/share/clr-bundles/ipset-services
 /usr/share/clr-bundles/iptables
+/usr/share/clr-bundles/iptables-basic
 /usr/share/clr-bundles/iptables-bin
 /usr/share/clr-bundles/iptables-data
 /usr/share/clr-bundles/iptables-dev
@@ -7578,6 +7637,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/jemalloc-license
 /usr/share/clr-bundles/jemalloc-staticdev
 /usr/share/clr-bundles/joe
+/usr/share/clr-bundles/joe-basic
 /usr/share/clr-bundles/joe-bin
 /usr/share/clr-bundles/joe-data
 /usr/share/clr-bundles/joe-doc
@@ -7651,6 +7711,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kalgebra-license
 /usr/share/clr-bundles/kalgebra-locales
 /usr/share/clr-bundles/kamera
+/usr/share/clr-bundles/kamera-basic
 /usr/share/clr-bundles/kamera-data
 /usr/share/clr-bundles/kamera-doc
 /usr/share/clr-bundles/kamera-lib
@@ -7663,6 +7724,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kanagram-license
 /usr/share/clr-bundles/kanagram-locales
 /usr/share/clr-bundles/kapidox
+/usr/share/clr-bundles/kapidox-basic
 /usr/share/clr-bundles/kapidox-bin
 /usr/share/clr-bundles/kapidox-license
 /usr/share/clr-bundles/kapidox-man
@@ -7686,6 +7748,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/karchive-lib
 /usr/share/clr-bundles/karchive-license
 /usr/share/clr-bundles/kate
+/usr/share/clr-bundles/kate-basic
 /usr/share/clr-bundles/kate-bin
 /usr/share/clr-bundles/kate-data
 /usr/share/clr-bundles/kate-doc
@@ -7705,6 +7768,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kauth-lib
 /usr/share/clr-bundles/kauth-license
 /usr/share/clr-bundles/kbackup
+/usr/share/clr-bundles/kbackup-basic
 /usr/share/clr-bundles/kbackup-bin
 /usr/share/clr-bundles/kbackup-data
 /usr/share/clr-bundles/kbackup-doc
@@ -7754,12 +7818,14 @@ GOAMD64=v2
 /usr/share/clr-bundles/kbruch-locales
 /usr/share/clr-bundles/kbruch-man
 /usr/share/clr-bundles/kcachegrind
+/usr/share/clr-bundles/kcachegrind-basic
 /usr/share/clr-bundles/kcachegrind-bin
 /usr/share/clr-bundles/kcachegrind-data
 /usr/share/clr-bundles/kcachegrind-doc
 /usr/share/clr-bundles/kcachegrind-license
 /usr/share/clr-bundles/kcachegrind-locales
 /usr/share/clr-bundles/kcalc
+/usr/share/clr-bundles/kcalc-basic
 /usr/share/clr-bundles/kcalc-bin
 /usr/share/clr-bundles/kcalc-data
 /usr/share/clr-bundles/kcalc-doc
@@ -7777,6 +7843,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kcalutils-license
 /usr/share/clr-bundles/kcalutils-locales
 /usr/share/clr-bundles/kcharselect
+/usr/share/clr-bundles/kcharselect-basic
 /usr/share/clr-bundles/kcharselect-bin
 /usr/share/clr-bundles/kcharselect-data
 /usr/share/clr-bundles/kcharselect-doc
@@ -7795,6 +7862,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kcodecs-lib
 /usr/share/clr-bundles/kcodecs-license
 /usr/share/clr-bundles/kcolorchooser
+/usr/share/clr-bundles/kcolorchooser-basic
 /usr/share/clr-bundles/kcolorchooser-bin
 /usr/share/clr-bundles/kcolorchooser-data
 /usr/share/clr-bundles/kcolorchooser-license
@@ -7843,6 +7911,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kcrash-lib
 /usr/share/clr-bundles/kcrash-license
 /usr/share/clr-bundles/kcron
+/usr/share/clr-bundles/kcron-basic
 /usr/share/clr-bundles/kcron-data
 /usr/share/clr-bundles/kcron-doc
 /usr/share/clr-bundles/kcron-lib
@@ -7879,13 +7948,12 @@ GOAMD64=v2
 /usr/share/clr-bundles/kde-dev-utils-lib
 /usr/share/clr-bundles/kde-dev-utils-license
 /usr/share/clr-bundles/kde-dev-utils-locales
-/usr/share/clr-bundles/kde-frameworks5
-/usr/share/clr-bundles/kde-frameworks5-dev
 /usr/share/clr-bundles/kde-gtk-config
 /usr/share/clr-bundles/kde-gtk-config-data
 /usr/share/clr-bundles/kde-gtk-config-lib
 /usr/share/clr-bundles/kde-gtk-config-license
 /usr/share/clr-bundles/kdebugsettings
+/usr/share/clr-bundles/kdebugsettings-basic
 /usr/share/clr-bundles/kdebugsettings-bin
 /usr/share/clr-bundles/kdebugsettings-data
 /usr/share/clr-bundles/kdebugsettings-lib
@@ -7968,6 +8036,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kdesu-license
 /usr/share/clr-bundles/kdesu-locales
 /usr/share/clr-bundles/kdf
+/usr/share/clr-bundles/kdf-basic
 /usr/share/clr-bundles/kdf-bin
 /usr/share/clr-bundles/kdf-data
 /usr/share/clr-bundles/kdf-doc
@@ -7975,6 +8044,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kdf-license
 /usr/share/clr-bundles/kdf-locales
 /usr/share/clr-bundles/kdiagram
+/usr/share/clr-bundles/kdiagram-basic
 /usr/share/clr-bundles/kdiagram-data
 /usr/share/clr-bundles/kdiagram-dev
 /usr/share/clr-bundles/kdiagram-lib
@@ -8017,6 +8087,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kdsoap-ws-discovery-client-lib
 /usr/share/clr-bundles/kdsoap-ws-discovery-client-license
 /usr/share/clr-bundles/keditbookmarks
+/usr/share/clr-bundles/keditbookmarks-basic
 /usr/share/clr-bundles/keditbookmarks-bin
 /usr/share/clr-bundles/keditbookmarks-data
 /usr/share/clr-bundles/keditbookmarks-doc
@@ -8081,6 +8152,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kfilemetadata-license
 /usr/share/clr-bundles/kfilemetadata-locales
 /usr/share/clr-bundles/kfind
+/usr/share/clr-bundles/kfind-basic
 /usr/share/clr-bundles/kfind-bin
 /usr/share/clr-bundles/kfind-data
 /usr/share/clr-bundles/kfind-doc
@@ -8100,6 +8172,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kgamma-license
 /usr/share/clr-bundles/kgamma-locales
 /usr/share/clr-bundles/kgeography
+/usr/share/clr-bundles/kgeography-basic
 /usr/share/clr-bundles/kgeography-bin
 /usr/share/clr-bundles/kgeography-data
 /usr/share/clr-bundles/kgeography-doc
@@ -8214,6 +8287,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kimageannotator-lib
 /usr/share/clr-bundles/kimageannotator-license
 /usr/share/clr-bundles/kimageformats
+/usr/share/clr-bundles/kimageformats-dev
 /usr/share/clr-bundles/kimageformats-lib
 /usr/share/clr-bundles/kimageformats-license
 /usr/share/clr-bundles/kimagemapeditor
@@ -8307,6 +8381,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kiten-license
 /usr/share/clr-bundles/kiten-locales
 /usr/share/clr-bundles/kitinerary
+/usr/share/clr-bundles/kitinerary-basic
 /usr/share/clr-bundles/kitinerary-data
 /usr/share/clr-bundles/kitinerary-dev
 /usr/share/clr-bundles/kitinerary-lib
@@ -8338,6 +8413,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kldap-license
 /usr/share/clr-bundles/kldap-locales
 /usr/share/clr-bundles/kleopatra
+/usr/share/clr-bundles/kleopatra-basic
 /usr/share/clr-bundles/kleopatra-bin
 /usr/share/clr-bundles/kleopatra-data
 /usr/share/clr-bundles/kleopatra-doc
@@ -8397,7 +8473,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/kmbox-dev
 /usr/share/clr-bundles/kmbox-lib
 /usr/share/clr-bundles/kmbox-license
-/usr/share/clr-bundles/kmediaplayer
 /usr/share/clr-bundles/kmenuedit
 /usr/share/clr-bundles/kmenuedit-bin
 /usr/share/clr-bundles/kmenuedit-data
@@ -8424,6 +8499,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kmod-lib32
 /usr/share/clr-bundles/kmod-license
 /usr/share/clr-bundles/kmousetool
+/usr/share/clr-bundles/kmousetool-basic
 /usr/share/clr-bundles/kmousetool-bin
 /usr/share/clr-bundles/kmousetool-data
 /usr/share/clr-bundles/kmousetool-doc
@@ -8438,6 +8514,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kmouth-locales
 /usr/share/clr-bundles/kmouth-man
 /usr/share/clr-bundles/kmplot
+/usr/share/clr-bundles/kmplot-basic
 /usr/share/clr-bundles/kmplot-bin
 /usr/share/clr-bundles/kmplot-data
 /usr/share/clr-bundles/kmplot-doc
@@ -8475,6 +8552,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/knights-license
 /usr/share/clr-bundles/knights-locales
 /usr/share/clr-bundles/knotes
+/usr/share/clr-bundles/knotes-basic
 /usr/share/clr-bundles/knotes-bin
 /usr/share/clr-bundles/knotes-data
 /usr/share/clr-bundles/knotes-doc
@@ -8493,6 +8571,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/knotifyconfig-license
 /usr/share/clr-bundles/knotifyconfig-locales
 /usr/share/clr-bundles/koji
+/usr/share/clr-bundles/koji-basic
 /usr/share/clr-bundles/koji-bin
 /usr/share/clr-bundles/koji-data
 /usr/share/clr-bundles/koji-doc
@@ -8514,6 +8593,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kollision-license
 /usr/share/clr-bundles/kollision-locales
 /usr/share/clr-bundles/kolourpaint
+/usr/share/clr-bundles/kolourpaint-basic
 /usr/share/clr-bundles/kolourpaint-bin
 /usr/share/clr-bundles/kolourpaint-data
 /usr/share/clr-bundles/kolourpaint-dev
@@ -8521,8 +8601,8 @@ GOAMD64=v2
 /usr/share/clr-bundles/kolourpaint-lib
 /usr/share/clr-bundles/kolourpaint-license
 /usr/share/clr-bundles/kolourpaint-locales
-/usr/share/clr-bundles/kompare
 /usr/share/clr-bundles/konqueror
+/usr/share/clr-bundles/konqueror-basic
 /usr/share/clr-bundles/konqueror-bin
 /usr/share/clr-bundles/konqueror-data
 /usr/share/clr-bundles/konqueror-dev
@@ -8537,6 +8617,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/konquest-license
 /usr/share/clr-bundles/konquest-locales
 /usr/share/clr-bundles/konsole
+/usr/share/clr-bundles/konsole-basic
 /usr/share/clr-bundles/konsole-bin
 /usr/share/clr-bundles/konsole-data
 /usr/share/clr-bundles/konsole-doc
@@ -8544,6 +8625,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/konsole-license
 /usr/share/clr-bundles/konsole-locales
 /usr/share/clr-bundles/kontact
+/usr/share/clr-bundles/kontact-basic
 /usr/share/clr-bundles/kontact-bin
 /usr/share/clr-bundles/kontact-data
 /usr/share/clr-bundles/kontact-doc
@@ -8557,6 +8639,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/kontactinterface-license
 /usr/share/clr-bundles/kontactinterface-locales
 /usr/share/clr-bundles/konversation
+/usr/share/clr-bundles/konversation-basic
 /usr/share/clr-bundles/konversation-bin
 /usr/share/clr-bundles/konversation-data
 /usr/share/clr-bundles/konversation-doc
@@ -8746,6 +8829,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/ksvg-lib
 /usr/share/clr-bundles/ksvg-license
 /usr/share/clr-bundles/ksystemlog
+/usr/share/clr-bundles/ksystemlog-basic
 /usr/share/clr-bundles/ksystemlog-bin
 /usr/share/clr-bundles/ksystemlog-data
 /usr/share/clr-bundles/ksystemlog-doc
@@ -8913,7 +8997,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/latencytop
 /usr/share/clr-bundles/latencytop-bin
 /usr/share/clr-bundles/latencytop-data
-/usr/share/clr-bundles/latte-dock
 /usr/share/clr-bundles/layer-shell-qt
 /usr/share/clr-bundles/layer-shell-qt-dev
 /usr/share/clr-bundles/layer-shell-qt-lib
@@ -11061,6 +11144,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/libzmq-man
 /usr/share/clr-bundles/libzmq-staticdev
 /usr/share/clr-bundles/lightdm
+/usr/share/clr-bundles/lightdm-basic
 /usr/share/clr-bundles/lightdm-bin
 /usr/share/clr-bundles/lightdm-config
 /usr/share/clr-bundles/lightdm-data
@@ -11103,6 +11187,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/linux-firmware
 /usr/share/clr-bundles/linux-firmware-doc
 /usr/share/clr-bundles/linux-firmware-extras
+/usr/share/clr-bundles/linux-firmware-extras-basic
 /usr/share/clr-bundles/linux-firmware-i915-cpio
 /usr/share/clr-bundles/linux-firmware-ipu
 /usr/share/clr-bundles/linux-firmware-ipu-abi
@@ -11163,6 +11248,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/linux-tools
 /usr/share/clr-bundles/linux-tools-hyperv
 /usr/share/clr-bundles/linuxcnc
+/usr/share/clr-bundles/linuxcnc-basic
 /usr/share/clr-bundles/linuxcnc-bin
 /usr/share/clr-bundles/linuxcnc-data
 /usr/share/clr-bundles/linuxcnc-dev
@@ -11189,7 +11275,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/llama.cpp-dev
 /usr/share/clr-bundles/llama.cpp-lib
 /usr/share/clr-bundles/llama.cpp-license
-/usr/share/clr-bundles/lldb
 /usr/share/clr-bundles/lldpd
 /usr/share/clr-bundles/lldpd-autostart
 /usr/share/clr-bundles/lldpd-bin
@@ -11341,6 +11426,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/lualgi-lib
 /usr/share/clr-bundles/lualgi-license
 /usr/share/clr-bundles/luanti
+/usr/share/clr-bundles/luanti-basic
 /usr/share/clr-bundles/luanti-bin
 /usr/share/clr-bundles/luanti-data
 /usr/share/clr-bundles/luanti-doc
@@ -11354,6 +11440,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/luarocks-data
 /usr/share/clr-bundles/luarocks-license
 /usr/share/clr-bundles/lutris
+/usr/share/clr-bundles/lutris-basic
 /usr/share/clr-bundles/lutris-bin
 /usr/share/clr-bundles/lutris-data
 /usr/share/clr-bundles/lutris-license
@@ -11468,6 +11555,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/man-db-man
 /usr/share/clr-bundles/man-db-services
 /usr/share/clr-bundles/man-pages
+/usr/share/clr-bundles/man-pages-basic
 /usr/share/clr-bundles/man-pages-bin
 /usr/share/clr-bundles/man-pages-dev
 /usr/share/clr-bundles/man-pages-license
@@ -11488,6 +11576,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/marble-license
 /usr/share/clr-bundles/marble-locales
 /usr/share/clr-bundles/mariadb
+/usr/share/clr-bundles/mariadb-basic
 /usr/share/clr-bundles/mariadb-bin
 /usr/share/clr-bundles/mariadb-clientlibs
 /usr/share/clr-bundles/mariadb-config
@@ -11797,6 +11886,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/modsecurity-nginx-lib
 /usr/share/clr-bundles/modules
 /usr/share/clr-bundles/modules-abi
+/usr/share/clr-bundles/modules-basic
 /usr/share/clr-bundles/modules-bin
 /usr/share/clr-bundles/modules-data
 /usr/share/clr-bundles/modules-dev
@@ -11818,6 +11908,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/mold-license
 /usr/share/clr-bundles/mold-man
 /usr/share/clr-bundles/mono
+/usr/share/clr-bundles/mono-basic
 /usr/share/clr-bundles/mono-bin
 /usr/share/clr-bundles/mono-data
 /usr/share/clr-bundles/mono-dev
@@ -11826,6 +11917,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/mono-locales
 /usr/share/clr-bundles/mono-man
 /usr/share/clr-bundles/moreutils
+/usr/share/clr-bundles/moreutils-basic
 /usr/share/clr-bundles/moreutils-bin
 /usr/share/clr-bundles/moreutils-license
 /usr/share/clr-bundles/mosh
@@ -11891,6 +11983,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/mpi4py-python
 /usr/share/clr-bundles/mpi4py-python3
 /usr/share/clr-bundles/mpv
+/usr/share/clr-bundles/mpv-basic
 /usr/share/clr-bundles/mpv-bin
 /usr/share/clr-bundles/mpv-data
 /usr/share/clr-bundles/mpv-dev
@@ -12029,6 +12122,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/nasm-license
 /usr/share/clr-bundles/nasm-man
 /usr/share/clr-bundles/nautilus
+/usr/share/clr-bundles/nautilus-basic
 /usr/share/clr-bundles/nautilus-bin
 /usr/share/clr-bundles/nautilus-data
 /usr/share/clr-bundles/nautilus-dev
@@ -12103,6 +12197,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/net-snmp-services
 /usr/share/clr-bundles/net-tools
 /usr/share/clr-bundles/net-tools-abi
+/usr/share/clr-bundles/net-tools-basic
 /usr/share/clr-bundles/net-tools-bin
 /usr/share/clr-bundles/net-tools-license
 /usr/share/clr-bundles/net-tools-locales
@@ -12238,7 +12333,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/nginx-mainline-config
 /usr/share/clr-bundles/nginx-mainline-data
 /usr/share/clr-bundles/nginx-mainline-dev
-/usr/share/clr-bundles/nginx-mainline-extras
 /usr/share/clr-bundles/nginx-mainline-extras-modulebuild
 /usr/share/clr-bundles/nginx-mainline-lib
 /usr/share/clr-bundles/nginx-mainline-license
@@ -12454,6 +12548,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/oath-toolkit-license
 /usr/share/clr-bundles/oath-toolkit-man
 /usr/share/clr-bundles/obs-studio
+/usr/share/clr-bundles/obs-studio-basic
 /usr/share/clr-bundles/obs-studio-bin
 /usr/share/clr-bundles/obs-studio-data
 /usr/share/clr-bundles/obs-studio-dev
@@ -12478,6 +12573,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/ocl-icd-lib
 /usr/share/clr-bundles/ocl-icd-license
 /usr/share/clr-bundles/octave
+/usr/share/clr-bundles/octave-basic
 /usr/share/clr-bundles/octave-bin
 /usr/share/clr-bundles/octave-data
 /usr/share/clr-bundles/octave-dev
@@ -12491,6 +12587,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/oiio-lib
 /usr/share/clr-bundles/oiio-license
 /usr/share/clr-bundles/okular
+/usr/share/clr-bundles/okular-basic
 /usr/share/clr-bundles/okular-bin
 /usr/share/clr-bundles/okular-data
 /usr/share/clr-bundles/okular-dev
@@ -12576,6 +12673,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/openal-soft-lib32
 /usr/share/clr-bundles/openal-soft-license
 /usr/share/clr-bundles/openblas
+/usr/share/clr-bundles/openblas-basic
 /usr/share/clr-bundles/openblas-dev
 /usr/share/clr-bundles/openblas-staticdev
 /usr/share/clr-bundles/openbox
@@ -12658,6 +12756,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/openldap-man
 /usr/share/clr-bundles/openldap-services
 /usr/share/clr-bundles/openmpi
+/usr/share/clr-bundles/openmpi-basic
 /usr/share/clr-bundles/openmpi-bin
 /usr/share/clr-bundles/openmpi-data
 /usr/share/clr-bundles/openmpi-dev
@@ -12693,6 +12792,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/openssh-server
 /usr/share/clr-bundles/openssh-services
 /usr/share/clr-bundles/openssl
+/usr/share/clr-bundles/openssl-basic
 /usr/share/clr-bundles/openssl-dev
 /usr/share/clr-bundles/openssl-dev32
 /usr/share/clr-bundles/openssl-doc
@@ -12714,6 +12814,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/openvpn-man
 /usr/share/clr-bundles/openvpn-services
 /usr/share/clr-bundles/openvswitch
+/usr/share/clr-bundles/openvswitch-basic
 /usr/share/clr-bundles/openvswitch-bin
 /usr/share/clr-bundles/openvswitch-data
 /usr/share/clr-bundles/openvswitch-dev
@@ -12955,6 +13056,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/passwdqc-license
 /usr/share/clr-bundles/passwdqc-man
 /usr/share/clr-bundles/patch
+/usr/share/clr-bundles/patch-basic
 /usr/share/clr-bundles/patch-bin
 /usr/share/clr-bundles/patch-license
 /usr/share/clr-bundles/patch-man
@@ -16382,6 +16484,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/phonon-lib
 /usr/share/clr-bundles/phonon-license
 /usr/share/clr-bundles/phoronix-test-suite
+/usr/share/clr-bundles/phoronix-test-suite-basic
 /usr/share/clr-bundles/phoronix-test-suite-bin
 /usr/share/clr-bundles/phoronix-test-suite-data
 /usr/share/clr-bundles/phoronix-test-suite-doc
@@ -16582,6 +16685,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/picocom-license
 /usr/share/clr-bundles/picocom-man
 /usr/share/clr-bundles/pidgin
+/usr/share/clr-bundles/pidgin-basic
 /usr/share/clr-bundles/pidgin-bin
 /usr/share/clr-bundles/pidgin-data
 /usr/share/clr-bundles/pidgin-dev
@@ -16872,6 +16976,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/postgis-license
 /usr/share/clr-bundles/postgis-man
 /usr/share/clr-bundles/postgresql
+/usr/share/clr-bundles/postgresql-basic
 /usr/share/clr-bundles/postgresql-bin
 /usr/share/clr-bundles/postgresql-config
 /usr/share/clr-bundles/postgresql-data
@@ -17120,7 +17225,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-adal-python
 /usr/share/clr-bundles/pypi-adal-python3
 /usr/share/clr-bundles/pypi-aiodns
-/usr/share/clr-bundles/pypi-aiodns-license
 /usr/share/clr-bundles/pypi-aiodns-python
 /usr/share/clr-bundles/pypi-aiodns-python3
 /usr/share/clr-bundles/pypi-aiofiles
@@ -17525,6 +17629,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-cached_property-python
 /usr/share/clr-bundles/pypi-cached_property-python3
 /usr/share/clr-bundles/pypi-cachetools
+/usr/share/clr-bundles/pypi-cachetools-license
 /usr/share/clr-bundles/pypi-cachetools-python
 /usr/share/clr-bundles/pypi-cachetools-python3
 /usr/share/clr-bundles/pypi-cachez
@@ -18946,7 +19051,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-lark_parser-python
 /usr/share/clr-bundles/pypi-lark_parser-python3
 /usr/share/clr-bundles/pypi-latexcodec
-/usr/share/clr-bundles/pypi-latexcodec-license
 /usr/share/clr-bundles/pypi-latexcodec-python
 /usr/share/clr-bundles/pypi-latexcodec-python3
 /usr/share/clr-bundles/pypi-lavacli
@@ -21726,6 +21830,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/python3-tcl
 /usr/share/clr-bundles/python3-xz-lzma
 /usr/share/clr-bundles/pytorch
+/usr/share/clr-bundles/pytorch-basic
 /usr/share/clr-bundles/pytorch-bin
 /usr/share/clr-bundles/pytorch-dev
 /usr/share/clr-bundles/pytorch-license
@@ -21789,6 +21894,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/qemu-extras
 /usr/share/clr-bundles/qemu-guest-additions
 /usr/share/clr-bundles/qemu-guest-additions-autostart
+/usr/share/clr-bundles/qemu-guest-additions-basic
 /usr/share/clr-bundles/qemu-guest-additions-bin
 /usr/share/clr-bundles/qemu-guest-additions-license
 /usr/share/clr-bundles/qemu-guest-additions-man
@@ -22198,6 +22304,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/quagga-license
 /usr/share/clr-bundles/quagga-man
 /usr/share/clr-bundles/quassel
+/usr/share/clr-bundles/quassel-basic
 /usr/share/clr-bundles/quassel-bin
 /usr/share/clr-bundles/quassel-config
 /usr/share/clr-bundles/quassel-data
@@ -22446,6 +22553,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/rrdtool-python
 /usr/share/clr-bundles/rrdtool-python3
 /usr/share/clr-bundles/rsync
+/usr/share/clr-bundles/rsync-basic
 /usr/share/clr-bundles/rsync-bin
 /usr/share/clr-bundles/rsync-license
 /usr/share/clr-bundles/rsync-man
@@ -22506,6 +22614,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/rustc-license
 /usr/share/clr-bundles/rustc-man
 /usr/share/clr-bundles/rxvt-unicode
+/usr/share/clr-bundles/rxvt-unicode-basic
 /usr/share/clr-bundles/rxvt-unicode-bin
 /usr/share/clr-bundles/rxvt-unicode-data
 /usr/share/clr-bundles/rxvt-unicode-license
@@ -22520,6 +22629,9 @@ GOAMD64=v2
 /usr/share/clr-bundles/s3fs-fuse-bin
 /usr/share/clr-bundles/s3fs-fuse-license
 /usr/share/clr-bundles/s3fs-fuse-man
+/usr/share/clr-bundles/s5cmd
+/usr/share/clr-bundles/s5cmd-bin
+/usr/share/clr-bundles/s5cmd-license
 /usr/share/clr-bundles/salt
 /usr/share/clr-bundles/salt-bin
 /usr/share/clr-bundles/salt-license
@@ -22590,6 +22702,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/scipy-python3
 /usr/share/clr-bundles/scm-server
 /usr/share/clr-bundles/scons
+/usr/share/clr-bundles/scons-basic
 /usr/share/clr-bundles/scons-bin
 /usr/share/clr-bundles/scons-license
 /usr/share/clr-bundles/scons-man
@@ -22609,6 +22722,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/screen-license
 /usr/share/clr-bundles/screen-man
 /usr/share/clr-bundles/scummvm
+/usr/share/clr-bundles/scummvm-basic
 /usr/share/clr-bundles/scummvm-bin
 /usr/share/clr-bundles/scummvm-data
 /usr/share/clr-bundles/scummvm-doc
@@ -22622,6 +22736,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/scx-services
 /usr/share/clr-bundles/sddm
 /usr/share/clr-bundles/sddm-autostart
+/usr/share/clr-bundles/sddm-basic
 /usr/share/clr-bundles/sddm-bin
 /usr/share/clr-bundles/sddm-config
 /usr/share/clr-bundles/sddm-data
@@ -22803,6 +22918,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/snappy-lib
 /usr/share/clr-bundles/snappy-license
 /usr/share/clr-bundles/snapshot
+/usr/share/clr-bundles/snapshot-basic
 /usr/share/clr-bundles/snapshot-bin
 /usr/share/clr-bundles/snapshot-data
 /usr/share/clr-bundles/snapshot-license
@@ -22880,6 +22996,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/spdlog-lib
 /usr/share/clr-bundles/spdlog-license
 /usr/share/clr-bundles/spectacle
+/usr/share/clr-bundles/spectacle-basic
 /usr/share/clr-bundles/spectacle-bin
 /usr/share/clr-bundles/spectacle-data
 /usr/share/clr-bundles/spectacle-doc
@@ -22904,6 +23021,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/spice
 /usr/share/clr-bundles/spice-dev
 /usr/share/clr-bundles/spice-gtk
+/usr/share/clr-bundles/spice-gtk-basic
 /usr/share/clr-bundles/spice-gtk-bin
 /usr/share/clr-bundles/spice-gtk-data
 /usr/share/clr-bundles/spice-gtk-dev
@@ -22926,7 +23044,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/spice-vdagent-license
 /usr/share/clr-bundles/spice-vdagent-man
 /usr/share/clr-bundles/spice-vdagent-services
-/usr/share/clr-bundles/spyder-ide
 /usr/share/clr-bundles/sqlite
 /usr/share/clr-bundles/sqlite-autoconf
 /usr/share/clr-bundles/sqlite-autoconf-bin
@@ -22988,6 +23105,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/ssw-license
 /usr/share/clr-bundles/stacer
 /usr/share/clr-bundles/stacer-abi
+/usr/share/clr-bundles/stacer-basic
 /usr/share/clr-bundles/stacer-bin
 /usr/share/clr-bundles/stacer-data
 /usr/share/clr-bundles/stacer-license
@@ -23080,6 +23198,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/sundials-license
 /usr/share/clr-bundles/sundials-staticdev
 /usr/share/clr-bundles/supertuxkart
+/usr/share/clr-bundles/supertuxkart-basic
 /usr/share/clr-bundles/supertuxkart-bin
 /usr/share/clr-bundles/supertuxkart-data
 /usr/share/clr-bundles/supertuxkart-dev
@@ -23106,6 +23225,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/svxlink-extras-server
 /usr/share/clr-bundles/svxlink-lib
 /usr/share/clr-bundles/sway
+/usr/share/clr-bundles/sway-basic
 /usr/share/clr-bundles/sway-bin
 /usr/share/clr-bundles/sway-data
 /usr/share/clr-bundles/sway-license
@@ -23159,6 +23279,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/swupd-search-bin
 /usr/share/clr-bundles/sxiv
 /usr/share/clr-bundles/sxiv-abi
+/usr/share/clr-bundles/sxiv-basic
 /usr/share/clr-bundles/sxiv-bin
 /usr/share/clr-bundles/sxiv-data
 /usr/share/clr-bundles/sxiv-license
@@ -23177,6 +23298,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/syncthing-man
 /usr/share/clr-bundles/syncthing-services
 /usr/share/clr-bundles/syndication
+/usr/share/clr-bundles/syndication-basic
 /usr/share/clr-bundles/syndication-data
 /usr/share/clr-bundles/syndication-dev
 /usr/share/clr-bundles/syndication-lib
@@ -23196,6 +23318,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/sysadmin-hostmgmt
 /usr/share/clr-bundles/sysadmin-remote
 /usr/share/clr-bundles/syslinux
+/usr/share/clr-bundles/syslinux-basic
 /usr/share/clr-bundles/syslinux-bin
 /usr/share/clr-bundles/syslinux-data
 /usr/share/clr-bundles/syslinux-dev
@@ -23402,6 +23525,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/texinfo-man
 /usr/share/clr-bundles/texinfo-services
 /usr/share/clr-bundles/texlive
+/usr/share/clr-bundles/texlive-basic
 /usr/share/clr-bundles/texlive-bin
 /usr/share/clr-bundles/texlive-data
 /usr/share/clr-bundles/texlive-dev
@@ -23428,6 +23552,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/the_silver_searcher-man
 /usr/share/clr-bundles/thermal_daemon
 /usr/share/clr-bundles/thermal_daemon-autostart
+/usr/share/clr-bundles/thermal_daemon-basic
 /usr/share/clr-bundles/thermal_daemon-bin
 /usr/share/clr-bundles/thermal_daemon-config
 /usr/share/clr-bundles/thermal_daemon-data
@@ -23459,6 +23584,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/thunar-volman-license
 /usr/share/clr-bundles/thunar-volman-locales
 /usr/share/clr-bundles/thunderbird
+/usr/share/clr-bundles/thunderbird-basic
 /usr/share/clr-bundles/thunderbolt-software-user-space
 /usr/share/clr-bundles/thunderbolt-software-user-space-bin
 /usr/share/clr-bundles/thunderbolt-software-user-space-config
@@ -23478,6 +23604,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/tig-license
 /usr/share/clr-bundles/tig-man
 /usr/share/clr-bundles/tigervnc
+/usr/share/clr-bundles/tigervnc-basic
 /usr/share/clr-bundles/tigervnc-bin
 /usr/share/clr-bundles/tigervnc-data
 /usr/share/clr-bundles/tigervnc-doc
@@ -23526,6 +23653,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/tokyocabinet-license
 /usr/share/clr-bundles/tokyocabinet-man
 /usr/share/clr-bundles/totem
+/usr/share/clr-bundles/totem-basic
 /usr/share/clr-bundles/totem-bin
 /usr/share/clr-bundles/totem-data
 /usr/share/clr-bundles/totem-dev
@@ -23600,6 +23728,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/tree-sitter-lib
 /usr/share/clr-bundles/tree-sitter-license
 /usr/share/clr-bundles/trurl
+/usr/share/clr-bundles/trurl-basic
 /usr/share/clr-bundles/trurl-license
 /usr/share/clr-bundles/tzdata
 /usr/share/clr-bundles/tzdata-minimal
@@ -23891,6 +24020,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/virglrenderer-lib
 /usr/share/clr-bundles/virglrenderer-license
 /usr/share/clr-bundles/virt-manager
+/usr/share/clr-bundles/virt-manager-basic
 /usr/share/clr-bundles/virt-manager-bin
 /usr/share/clr-bundles/virt-manager-data
 /usr/share/clr-bundles/virt-manager-gui
@@ -23962,6 +24092,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/wavpack-lib
 /usr/share/clr-bundles/wavpack-man
 /usr/share/clr-bundles/waydroid
+/usr/share/clr-bundles/waydroid-basic
 /usr/share/clr-bundles/waydroid-bin
 /usr/share/clr-bundles/waydroid-data
 /usr/share/clr-bundles/waydroid-license
