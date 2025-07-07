@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : clr-bundles
-Version  : 43720
-Release  : 918
-URL      : https://github.com/clearlinux/clr-pundles/archive/43720/clr-pundles-43720.tar.gz
-Source0  : https://github.com/clearlinux/clr-pundles/archive/43720/clr-pundles-43720.tar.gz
+Version  : 43730
+Release  : 919
+URL      : https://github.com/clearlinux/clr-pundles/archive/43730/clr-pundles-43730.tar.gz
+Source0  : https://github.com/clearlinux/clr-pundles/archive/43730/clr-pundles-43730.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-pundles-43720
-cd %{_builddir}/clr-pundles-43720
+%setup -q -n clr-pundles-43730
+cd %{_builddir}/clr-pundles-43730
 pushd ..
-cp -a clr-pundles-43720 buildavx2
+cp -a clr-pundles-43730 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1751478745
+export SOURCE_DATE_EPOCH=1751898467
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,7 +84,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1751478745
+export SOURCE_DATE_EPOCH=1751898467
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -9069,7 +9069,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/lftp-man
 /usr/share/clr-bundles/lib-imageformat
 /usr/share/clr-bundles/lib-opengl
-/usr/share/clr-bundles/lib-openssl
 /usr/share/clr-bundles/lib-poppler
 /usr/share/clr-bundles/lib-samba
 /usr/share/clr-bundles/lib4sbom
