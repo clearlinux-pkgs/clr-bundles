@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : clr-bundles
-Version  : 43740
-Release  : 920
-URL      : https://github.com/clearlinux/clr-pundles/archive/43740/clr-pundles-43740.tar.gz
-Source0  : https://github.com/clearlinux/clr-pundles/archive/43740/clr-pundles-43740.tar.gz
+Version  : 43760
+Release  : 921
+URL      : https://github.com/clearlinux/clr-pundles/archive/43760/clr-pundles-43760.tar.gz
+Source0  : https://github.com/clearlinux/clr-pundles/archive/43760/clr-pundles-43760.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -30,10 +30,10 @@ data components for the clr-bundles package.
 
 
 %prep
-%setup -q -n clr-pundles-43740
-cd %{_builddir}/clr-pundles-43740
+%setup -q -n clr-pundles-43760
+cd %{_builddir}/clr-pundles-43760
 pushd ..
-cp -a clr-pundles-43740 buildavx2
+cp -a clr-pundles-43760 buildavx2
 popd
 
 %build
@@ -41,7 +41,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1752091768
+export SOURCE_DATE_EPOCH=1752252409
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,7 +84,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1752091768
+export SOURCE_DATE_EPOCH=1752252409
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
@@ -20354,10 +20354,6 @@ GOAMD64=v2
 /usr/share/clr-bundles/pypi-python_json_logger
 /usr/share/clr-bundles/pypi-python_json_logger-python
 /usr/share/clr-bundles/pypi-python_json_logger-python3
-/usr/share/clr-bundles/pypi-python_lsp_black
-/usr/share/clr-bundles/pypi-python_lsp_black-license
-/usr/share/clr-bundles/pypi-python_lsp_black-python
-/usr/share/clr-bundles/pypi-python_lsp_black-python3
 /usr/share/clr-bundles/pypi-python_lsp_jsonrpc
 /usr/share/clr-bundles/pypi-python_lsp_jsonrpc-license
 /usr/share/clr-bundles/pypi-python_lsp_jsonrpc-python
@@ -23205,9 +23201,7 @@ GOAMD64=v2
 /usr/share/clr-bundles/suricata
 /usr/share/clr-bundles/suricata-bin
 /usr/share/clr-bundles/suricata-data
-/usr/share/clr-bundles/suricata-dev
 /usr/share/clr-bundles/suricata-doc
-/usr/share/clr-bundles/suricata-lib
 /usr/share/clr-bundles/suricata-license
 /usr/share/clr-bundles/suricata-man
 /usr/share/clr-bundles/suricata-services
